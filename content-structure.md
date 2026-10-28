@@ -1,278 +1,425 @@
-# Struktur dan Copy Website CekDulu
+# Naskah dan struktur website CekDulu
 
-Status: draft implementasi HTML
+Tanggal: 28 Oktober 2026.
+Status: task 2 selesai; sumber copy untuk implementasi task 3-6.
+Dokumen ini belum mengubah tampilan HTML.
 
-Dokumen ini menjadi sumber copy untuk halaman utama website. Copy dapat
-disempurnakan lagi setelah screenshot aplikasi dan tautan publik tersedia.
+## Arah editorial
 
-## 1. Navigasi
+Bantu pengunjung memahami manfaat, melihat cara kerja, mengenali kecocokan,
+dan mengunduh CekDulu. Lengkapi informasi melalui contoh dan FAQ, bukan
+paragraf panjang pada setiap bagian.
 
-- Logo: CekDulu
-- Menu: Cara Kerja
-- Menu: Fitur
-- Menu: Bantuan
-- Menu: Privasi
-- CTA: Download di Google Play
+- Pertahankan tema navy, bagian terang, hijau/cyan, font dan tombol yang ada.
+- Bahasa sehari-hari, hangat, tanpa menghakimi pengeluaran pengguna.
+- Satu pesan utama per bagian; detail kondisi khusus masuk FAQ.
+- Screenshot menjadi bukti visual produk, bukan bukti keberhasilan finansial.
+- Tidak mengarang testimoni, jumlah pengguna, rating, atau angka penghematan.
+- Tidak menjanjikan target pasti tercapai atau saldo rekening dibaca otomatis.
+- Premium, login Google, dan backup akun tidak ditawarkan sebagai fitur tersedia.
+- Catatan implementasi dalam dokumen ini bukan teks yang ditampilkan ke pengunjung.
 
-Pada layar kecil, menu masuk ke navigasi mobile. CTA Google Play tetap mudah
-dijangkau.
+## Navigasi dan urutan
 
-## 2. Hero
+| Menu | Target | Tujuan |
+| --- | --- | --- |
+| Beranda / logo | #top | Perkenalan |
+| Cara Kerja | #cara-kerja | Cek sebelum membayar |
+| Fitur | #fitur | Target Aman dan manfaat fitur |
+| Untuk Siapa | #untuk-siapa | Situasi pengguna |
+| FAQ | #bantuan | Jawaban praktis |
+| Privasi | privacy.html | Kebijakan Privasi |
+| Download di Google Play | URL Google Play | Halaman aplikasi |
 
-Identitas:
+Urutan scroll: hero, pengenalan CekDulu, cara kerja, Target Aman, tiga pengaturan awal,
+Untuk Siapa, fitur harian/widget, privasi ringkas, FAQ, CTA penutup, footer.
 
-**CekDulu**
+Privasi dan kontak tersedia di footer. Navigasi Privacy Policy menuju
+`index.html#...`. Pertahankan ID `bantuan` untuk tautan lama.
+Menu mobile memuat tujuan yang sama.
 
-**Sebelum Bayar**
+## 1. Hero (#top)
 
-Headline:
+Identitas utama / H1: **CekDulu**
 
-**Lihat dampaknya sebelum uang keluar.**
+Tagline: **Sebelum Bayar**
 
-Body:
+Kalimat manfaat yang disepakati:
 
-CekDulu adalah pagar keuangan yang membantu kamu menilai setiap pembelian,
-supaya uang bulanan tetap cukup dan rencana akhir bulan tetap terjaga.
+**Cara mudah untuk mulai menjaga uangmu tetap terkendali.**
 
-CTA utama:
+Penjelasan:
 
-**Download di Google Play**
+Lihat dampaknya sebelum bayar, agar kamu bisa belanja lebih tenang tanpa kehilangan kendali.
 
-CTA sekunder:
+CTA utama: **Download di Google Play**
 
-**Lihat cara kerjanya**
+CTA sekunder: **Lihat Cara Kerja** -> #cara-kerja
 
-Catatan visual:
+Tiga poin pendukung:
 
-- Gunakan screenshot asli halaman utama aplikasi.
-- Jangan gunakan feature graphic lama karena tampilan aplikasinya sudah tidak
-  sesuai.
-- Sebelum screenshot diberikan, tampilkan mockup antarmuka CekDulu dari HTML
-  dan CSS agar halaman tetap terlihat utuh.
+- Cek sebelum bayar
+- Mulai tanpa login
+- Tetap pegang keputusanmu
 
-## 3. Nilai Utama
+Catatan visual opsional:
 
-Eyebrow:
+> Keputusan hari ini ikut menentukan ruang untuk hari berikutnya.
 
-**Bukan sekadar catatan pengeluaran**
+Visual: screenshot reflektif asli dengan angka terbaca. Brand CekDulu menonjol
+pada viewport pertama. Situasi pengguna ditempatkan di bagian Untuk Siapa,
+bukan tiga paragraf di atas hero.
 
-Judul:
+## 2. Cara kerja (#cara-kerja)
 
-**Berhenti sebentar. Lihat dampaknya. Baru putuskan.**
+Sebelum bagian ini, tampilkan pengenalan pada #tentang:
 
-Body:
+**Pagar keuangan sebelum kamu membayar.**
 
-CekDulu tidak terhubung ke rekening dan tidak memindahkan uangmu. Kamu cukup
-memasukkan nominal sebelum membayar. CekDulu akan menunjukkan apakah keputusan
-itu masih aman, mulai mendekati batas, atau berdampak pada hari-hari berikutnya.
+CekDulu Sebelum Bayar adalah aplikasi yang membantu kamu menjaga batas pengeluaran
+harian. Jika sebuah pembelian melewati batas tersebut, CekDulu menunjukkan dampaknya
+terhadap uang bulananmu, sehingga kamu bisa memutuskan dengan lebih tenang.
 
-## 4. Cara Kerja
+Link scroll bawah hero menuju pengenalan. CTA Lihat Cara Kerja tetap langsung
+menuju #cara-kerja.
 
-Judul:
+Judul: **Sebelum bayar, lihat apa yang berubah.**
 
-**Mulai dengan tiga hal sederhana**
+Mau pesan makanan, belanja, atau membeli sesuatu yang sudah kamu incar?
+Masukkan nominalnya untuk melihat dampaknya pada uang yang masih bisa digunakan.
+
+### Ketik nominal
+
+Buka CekDulu dan masukkan jumlah yang ingin kamu bayar.
+
+### Lihat dampaknya
+
+Periksa sisa Ruang Hari Ini. Jika nominalnya melewati batas, lihat pengaruhnya
+pada Hasil Terjaga Harian atau ruang untuk hari-hari berikutnya.
+
+### Putuskan
+
+Lanjutkan jika sesuai kebutuhanmu, atau batalkan jika ingin menundanya.
+Keputusan tetap di tanganmu.
+
+Catatan setelah langkah:
+
+**Mengecek nominal belum berarti mencatat pembayaran.** Kamu melihat dampaknya
+lebih dulu, lalu memilih lanjut atau batal. Pembayaran sebenarnya tetap
+dilakukan di tempat kamu bertransaksi.
+
+| Status | Copy pendek |
+| --- | --- |
+| Aman | Penggunaan masih dalam batas harian yang dihitung CekDulu. |
+| Mendekati batas | Ruang untuk pengeluaran hari ini mulai menipis. |
+| Melewati batas | Pengeluaran melampaui ruang hari ini. Periksa dampaknya sebelum lanjut. |
+
+Visual: input dan reflektif dari skenario yang sama. Jangan menetapkan persentase
+ambang status tanpa pemeriksaan kode aplikasi.
+
+## 3. Rencana dan Target Aman (#fitur)
+
+Judul: **Mau sisihkan uang untuk sesuatu yang berarti buatmu?**
+
+Jalan-jalan, sesuatu untuk diri sendiri, atau sekadar punya tabungan.
+Tentukan jumlah yang ingin tetap ada di akhir siklus sebagai Target Aman.
+CekDulu memperhitungkannya saat membagi ruang untuk kebutuhan sehari-hari.
+
+Contoh tujuan, bukan input interaktif:
+
+- **Self reward:** sesuatu yang sudah lama kamu inginkan.
+- **Jalan-jalan:** rencana pergi yang ingin kamu siapkan.
+- **Simpan:** uang yang ingin tetap tersisa.
+- **Rencanamu sendiri:** beri nama tujuan yang berarti buatmu.
+
+Setiap kali ingin membayar, kamu bisa melihat pengaruhnya terhadap ruang uangmu
+dan rencana yang sedang dijaga.
+
+**Belum punya target? Tetap bisa mulai.** Fokuskan siklusmu untuk membuat uang
+cukup sampai pemasukan berikutnya.
+
+Visual: Target Aman di drawer dengan nama tujuan terbaca.
+Target Aman adalah bagian dari perhitungan, bukan pemindahan uang ke rekening
+lain. Jangan menggambarkannya sebagai uang yang dijamin terkunci.
+
+## 4. Pengaturan awal (#mulai)
+
+Judul: **Mulainya cukup dengan tiga hal.**
+
+Pembuka: Sesuaikan dengan kondisi uangmu sekarang.
 
 ### Dana Kendali
 
 Uang yang biasa kamu pakai untuk kebutuhan sehari-hari di luar kebutuhan tetap.
+Bukan seluruh gaji jika sebagian sudah disiapkan untuk kewajiban lain.
 
 ### Durasi Siklus
 
-Tentukan sampai kapan uang tersebut harus bertahan, biasanya hingga gajian atau
-pemasukan berikutnya.
+Tentukan sampai kapan uang ini harus bertahan, biasanya sampai sebelum gajian
+atau pemasukan berikutnya. Tidak harus mengikuti tanggal awal dan akhir bulan.
 
 ### Target Aman
 
-Pilih sejumlah uang yang ingin tetap ada di akhir siklus untuk ditabung,
-jalan-jalan, self reward, atau rencana lainnya. Target Aman bersifat opsional.
+Jumlah yang ingin tetap ada di akhir siklus. Isi sesuai rencanamu, atau mulai
+tanpa target jika yang terpenting adalah uang cukup sampai akhir periode.
+
+Contoh ringkas, diberi label **Contoh saat memulai siklus**:
+
+| Dana Kendali | Target Aman | Durasi | Ruang Harian awal |
+| --- | --- | --- | --- |
+| Rp3.000.000 | Rp600.000 | 30 hari | Rp80.000/hari |
+
+Dari Rp3.000.000, kamu ingin menjaga Rp600.000. Sisa Rp2.400.000 dibagi untuk
+30 hari, sehingga Ruang Harian awalmu Rp80.000.
+
+Catatan: Ruang harian dapat menyesuaikan mengikuti pengeluaran dan perubahan siklus.
+
+Contoh hanya menjelaskan pembagian awal, bukan simulasi seluruh kondisi,
+pembulatan, atau pemulihan. Tidak perlu membangun kalkulator baru.
+
+## 5. Untuk siapa (#untuk-siapa)
+
+Judul: **Untuk kamu yang ingin belanja lebih tenang dan tetap punya kendali.**
+
+CekDulu cocok untuk siapa pun yang ingin memahami dampak pembelian dan menjaga
+rencana keuangannya.
+
+Pembuka memakai foto ilustrasi perempuan dari belakang menghadap kota saat senja.
+Catatan tulisan tangan: **Bukan soal berapa yang kamu beli, tapi bagaimana kamu
+tetap sampai tujuan.** Tiga situasi pengguna berikut tetap berada di bawahnya.
+
+### Ada rencana, tetapi uangnya habis duluan.
+
+Saat pemasukan datang kamu sudah punya tujuan. Di tengah jalan, pengeluaran
+sehari-hari membuat rencana itu kembali tertunda.
+
+### Ingin membeli, tetapi belum yakin masih aman.
+
+Kamu ingin tahu apakah pembelian ini masih menyisakan cukup ruang untuk
+kebutuhan berikutnya.
+
+### Yang penting cukup sampai pemasukan berikutnya.
+
+Belum ada target khusus. Kamu hanya ingin lebih mudah melihat batas penggunaan
+uang selama periode yang kamu tentukan.
 
 Penutup:
 
-Setelah itu, CekDulu menghitung Ruang Hari Ini yang dapat kamu gunakan sambil
-menjaga siklus tetap terkendali.
+Baik dari gaji, uang saku, maupun pemasukan lainnya, kamu bisa mulai dari uang
+yang memang tersedia untuk kamu kendalikan.
 
-## 5. Pengalaman Sebelum Bayar
+Tiga situasi cukup; tidak perlu kartu tambahan berdasarkan profesi atau usia.
 
-Judul:
+## 6. Fitur harian dan widget (#keseharian)
 
-**Ketik nominalnya, lalu lihat dampaknya**
+Judul: **Kondisi uangmu, lebih mudah terlihat.**
 
-Urutan visual:
+Setelah mulai, gunakan ringkasan ini untuk mengikuti perjalanan siklusmu.
 
-1. Masukkan harga yang ingin dibayar.
-2. Tekan CekDulu.
-3. Lihat sisa Ruang Hari Ini dan dampaknya terhadap siklus.
-4. Putuskan lanjut bayar atau batal dengan lebih sadar.
+| Fitur | Penjelasan singkat |
+| --- | --- |
+| Ruang Hari Ini | Acuan uang yang masih bisa kamu gunakan hari ini berdasarkan kondisi siklus yang tercatat. |
+| Kalender Siklus | Lihat tanggal dan ringkasan perjalanan harian dalam siklusmu. |
+| Hasil Terjaga Harian | Ruang dari hari sebelumnya yang tidak terpakai dapat membantu menutup pengeluaran di atas batas harian. |
+| Riwayat dan laporan | Tinjau catatan penggunaan dan ringkasan hasil saat siklus selesai. |
 
-Status yang diperkenalkan:
+Subjudul widget: **Biar ingat sebelum uang keluar.**
 
-- **AMAN**: penggunaan masih berada dalam Ruang Hari Ini.
-- **MENDEKATI**: sebagian besar Ruang Hari Ini sudah digunakan.
-- **MELEWATI**: pembayaran melewati Ruang Hari Ini dan dampaknya akan
-  diperlihatkan sebelum keputusan diterapkan.
+Letakkan widget CekDulu di layar depan. Ringkasan kondisi siklus lebih mudah
+terlihat, sehingga kamu lebih mudah ingat untuk cek sebelum membayar.
 
-## 6. Fitur Utama
+Dua pendukung:
 
-### Ruang Hari Ini
+- **Pengingat harian:** bantu ingat untuk kembali mengecek kondisi siklus.
+  Kamu bisa mengaturnya melalui Pengaturan.
+- **Lencana progres:** lihat ringkasan kendali dan kebiasaan menggunakan CekDulu.
 
-Menunjukkan jumlah yang dapat digunakan hari ini agar Dana Kendali tetap cukup
-sampai akhir siklus dan Target Aman, jika digunakan, tetap terjaga.
+Visual: widget asli, ditambah potongan kalender/riwayat bila membantu.
+Hindari galeri tambahan yang mengulang fitur. Jangan menjanjikan widget selalu
+real-time atau notifikasi selalu tepat waktu di semua perangkat.
 
-### Kalender Siklus
+## 7. Kepercayaan dan privasi (#privasi)
 
-Melihat posisi hari ini dan ringkasan singkat perjalanan keuangan selama satu
-siklus.
+Judul: **Kamu tetap memegang kendali atas uangmu.**
 
-### Target Aman
+CekDulu menghitung dari nominal yang kamu masukkan. Aplikasi tidak terhubung
+ke rekening atau dompet digital, dan tidak memindahkan maupun memotong uangmu.
 
-Menjaga rencana akhir bulan tetap terlihat setiap kali kamu akan mengambil
-keputusan.
+- Mulai menggunakan aplikasi tanpa membuat akun.
+- Data keuangan utama disimpan di perangkatmu.
+- Tidak meminta PIN atau kata sandi bank.
 
-### Hasil Terjaga Harian
+Saat online, data penggunaan minimum tanpa nominal keuangan dapat dikirim
+untuk membantu memperbaiki aplikasi. Rinciannya tersedia di Kebijakan Privasi.
 
-Ruang yang berhasil tidak digunakan dapat membantu menyerap pengeluaran yang
-melewati Ruang Hari Ini pada hari berikutnya.
+CTA: **Baca Kebijakan Privasi** -> privacy.html
 
-### Widget Layar Depan
+Gunakan bagian pendek dengan tema mint yang sudah ada. Jangan mengklaim
+seluruh data hanya di HP atau sudah dicadangkan. Isi kebijakan tidak diubah.
 
-Menampilkan kondisi siklus dari layar depan agar kebiasaan cek dulu lebih mudah
-diingat.
+## 8. FAQ (#bantuan)
 
-### Riwayat dan Laporan Akhir
+Judul: **Hal yang mungkin ingin kamu tanyakan.**
 
-Melihat perjalanan harian, keputusan yang pernah dibuat, dan hasil akhir Siklus
-Kendali.
+Masih ada yang ingin ditanyakan? Hubungi kami di **cekdulu.help@gmail.com**.
 
-## 7. Galeri Aplikasi
+Gunakan accordion dengan jawaban tertutup pada awal. Kelompok di bawah bisa
+menjadi label pemindaian tanpa tab atau halaman baru.
 
-Judul:
+### Mulai menggunakan
 
-**Kenali kondisimu dalam sekali lihat**
+**Apakah CekDulu gratis?**
 
-Slot screenshot yang dibutuhkan:
+Versi CekDulu saat ini dapat digunakan gratis. Kamu bisa mengatur siklus dan
+mengecek dampak pengeluaran sebelum membayar.
 
-1. Halaman utama.
-2. Halaman reflektif setelah nominal diperiksa.
-3. Riwayat Harian.
-4. Widget layar depan.
-5. Drawer yang menampilkan Target Aman dan Hasil Terjaga Harian.
+**Apakah harus login atau selalu online?**
 
-Caption akan disesuaikan dengan screenshot final agar tidak menjelaskan fitur
-yang berbeda dari gambar.
+Kamu bisa mulai tanpa login. Pengaturan siklus, pengecekan nominal, dan catatan
+utama berjalan di perangkat sehingga dapat digunakan saat offline. Koneksi
+internet diperlukan untuk mengunduh atau memperbarui aplikasi.
 
-## 8. Kepercayaan dan Privasi
+**Apakah tersedia untuk iPhone?**
 
-Judul:
+Saat ini CekDulu tersedia untuk Android melalui Google Play.
 
-**Uangmu tidak dipindahkan oleh CekDulu**
+### Menjalankan siklus
 
-Body:
+**Apa bedanya Dana Kendali dan saldo rekening?**
 
-CekDulu bukan bank, dompet digital, layanan pinjaman, atau penasihat keuangan.
-Semua nominal dimasukkan sendiri oleh pengguna. CekDulu membantu menghitung
-dampak dan menyediakan ruang untuk berpikir sebelum membayar.
+Dana Kendali adalah uang yang kamu tentukan untuk kebutuhan sehari-hari di luar
+kebutuhan tetap. Nilainya kamu masukkan sendiri, bukan saldo yang dibaca dari rekening.
 
-Poin ringkas:
+**Apakah Target Aman wajib diisi?**
 
-- Tidak meminta nomor rekening, PIN, atau kata sandi bank.
-- Tidak menjual data pribadi untuk iklan.
-- Data utama disimpan di perangkat pengguna.
-- Analytics anonim minimum dapat digunakan untuk memahami kinerja dan
-  penggunaan fitur aplikasi.
+Tidak. Kamu bisa memulai tanpa Target Aman dan fokus menjaga Dana Kendali cukup
+sampai akhir siklus. Jika digunakan, Target Aman diperhitungkan saat menentukan
+ruang harian; uangnya tidak dipindahkan oleh aplikasi.
 
-CTA:
+**Apa yang terjadi jika pengeluaran melewati Ruang Hari Ini?**
 
-**Baca Kebijakan Privasi**
+CekDulu memperlihatkan dampaknya sebelum kamu melanjutkan. Hasil Terjaga Harian,
+jika tersedia, dapat membantu menutup kelebihannya. Jika belum cukup, ruang
+untuk hari-hari berikutnya dapat berubah. Periksa penyesuaian yang ditampilkan
+agar kamu tahu kondisi setelah pembayaran.
 
-Catatan implementasi:
+**Bagaimana kalau lupa membuka CekDulu selama beberapa hari?**
 
-Copy privasi harus mengikuti fitur rilis. Login Google masih disembunyikan pada
-rilis saat ini, sehingga website tidak boleh menjanjikan backup akun sebagai
-fitur yang sudah tersedia.
+Saat diminta memperbarui periode yang terlewat, kamu bisa memilih tidak ada
+pengeluaran, tidak ingat, atau mengisi total pengeluaran. Total gabungan dicatat
+untuk periode itu tanpa menebak pengeluaran pada masing-masing tanggal.
 
-## 9. Bantuan dan FAQ
+**Bagaimana kalau hari ini tidak ada pengeluaran?**
 
-### Apa itu CekDulu?
+Gunakan pilihan **Tandai hari ini tanpa bayar**. Kondisi hari itu tercatat dan
+kebiasaan cek dulu tetap terjaga tanpa perlu membuat pengeluaran.
 
-CekDulu adalah alat bantu pencatatan dan refleksi yang menunjukkan dampak
-pengeluaran sebelum kamu membayar.
+**Apa yang terjadi setelah siklus selesai?**
 
-### Apakah CekDulu terhubung ke rekening atau dompet digital?
+Kamu bisa meninjau ringkasan siklus, lalu mengisi Dana Kendali, Durasi Siklus,
+dan Target Aman untuk periode berikutnya sesuai kondisi terbaru.
 
-Tidak. Semua nominal dimasukkan sendiri oleh pengguna.
+### Data dan bantuan
 
-### Apakah CekDulu memindahkan atau memotong uang?
+**Apakah data bisa kembali jika aplikasi dihapus atau saya ganti HP?**
 
-Tidak. CekDulu hanya membantu menghitung dampak dan mendukung keputusan belanja
-yang lebih sadar.
+Data keuangan utama disimpan di perangkat. Backup dan pemulihan melalui akun
+belum tersedia untuk umum pada versi saat ini. Menghapus aplikasi atau data
+aplikasi, mereset HP, maupun mengganti HP dapat membuat catatan tidak dapat dipulihkan.
 
-### Apakah Target Aman wajib digunakan?
+**Bagaimana kalau angka yang ditampilkan tidak sesuai?**
 
-Tidak. Kamu tetap dapat menjalankan siklus dengan fokus membuat Dana Kendali
-cukup sampai akhir periode.
+Periksa Dana Kendali, durasi, dan pengeluaran yang sudah kamu masukkan, termasuk
+hari yang terlewat. Perhitungan mengikuti data yang tercatat. Jika masih ada
+kendala, kirim penjelasan dan versi aplikasi ke **cekdulu.help@gmail.com**.
+Jangan sertakan PIN, kata sandi, atau informasi rekening.
 
-### Mengapa Ruang Hari Ini dapat berubah?
+**Bagaimana cara mengirim masukan?**
 
-Ruang dapat menyesuaikan setelah pembayaran atau penyesuaian siklus agar Dana
-Kendali tetap menggambarkan kondisi terbaru.
+Kirim pengalaman atau saranmu ke **cekdulu.help@gmail.com**. Ceritakan bagian
+yang membantu atau masih membingungkan agar kami bisa memahami kebutuhanmu.
 
-### Bagaimana jika saya tidak mencatat selama beberapa hari?
+Catatan publikasi: gratis, offline, Android, label aksi, dan status backup
+mengikuti konteks versi rilis terakhir dalam percakapan serta kebijakan lokal.
+Periksa terhadap rilis aktif pada task 7; ini bukan hasil audit kode aplikasi.
 
-CekDulu dapat membantu memperbarui posisi siklus melalui input total pengeluaran
-untuk periode yang terlewat tanpa menganggap nominal tersebut sebagai catatan
-akurat untuk setiap hari.
+## 9. CTA penutup (#download)
 
-### Bagaimana cara menghubungi CekDulu?
+Judul: **Belanja dengan lebih tenang, mulai dari CekDulu.**
 
-Kirim pertanyaan atau permintaan bantuan ke **cekdulu.help@gmail.com**.
+Body: Unduh sekarang dan rasakan bedanya.
 
-## 10. CTA Penutup
+CTA: **Unduh di Google Play**, tombol dengan logo berwarna.
 
-Judul:
+Catatan tulisan tangan: Uang Kendali. Rencana Terjaga. Hidup Lebih Tenang.
 
-**Sebelum membayar, cek dampaknya dulu.**
+Tidak perlu hitung mundur, penawaran premium, atau CTA di setiap bagian.
 
-Body:
+## 10. Footer
 
-Bangun kebiasaan kecil yang membantu uang bulanan dan rencana akhir bulan tetap
-terjaga.
+Identitas: **CekDulu** / **Sebelum Bayar**
 
-CTA:
+Kalimat pendek: Temani keputusan kecilmu sebelum bayar.
 
-**Download di Google Play**
+| Label | Target |
+| --- | --- |
+| Cara Kerja | #cara-kerja |
+| Untuk Siapa | #untuk-siapa |
+| FAQ | #bantuan |
+| Kebijakan Privasi | privacy.html |
+| Hubungi Kami | mailto:cekdulu.help@gmail.com |
+| Google Play | https://play.google.com/store/apps/details?id=com.cekdulu.sebelumbayar |
+| Instagram | https://www.instagram.com/cekdulu_5detik/ |
+| TikTok | https://www.tiktok.com/@cekdulu5detik |
 
-## 11. Footer
+Pengantar sosial: **Ikuti kabar CekDulu**.
 
-- CekDulu
-- Sebelum Bayar
-- Bantuan
-- Kebijakan Privasi
-- Email: cekdulu.help@gmail.com
-- Instagram: tautan menyusul
-- TikTok: tautan menyusul
-- Google Play: tautan menyusul
-- Hak cipta: Tahun berjalan, CekDulu
+Instagram/TikTok memakai nama platform yang terbaca dan label aksesibel.
+URL resmi diberikan pengguna saat task 5. Tautan membuka tab baru; parameter
+berbagi TikTok dihilangkan. Tidak memakai feed embed. Berlaku juga di footer privasi.
 
-## 12. Metadata Dasar
+Copyright: tahun berjalan, CekDulu.
 
-Title:
+## Metadata dan domain
 
-`CekDulu - Lihat Dampaknya Sebelum Bayar`
+- Title: `CekDulu - Lihat Dampaknya Sebelum Bayar`.
+- Meta description: `Cara mudah untuk mulai menjaga uangmu tetap terkendali. Cek dampak pembelian sebelum bayar, agar uang bulanan dan rencanamu tetap terjaga.`
+- Open Graph: judul/ringkasan konsisten dengan hero; gambar mengikuti tampilan
+  final. Jangan memakai feature graphic lama tanpa pemeriksaan.
+- Domain sudah dimiliki pengguna, tetapi alamatnya belum diberikan.
+- Canonical, og:url, sitemap, robots, dan URL privasi publik disiapkan setelah
+  domain dan jalur hosting diketahui. Jangan menerbitkan domain contoh.
+- Tidak menambah blog, newsletter, tracking, atau klaim layanan baru.
 
-Meta description:
+## Aset dan batas implementasi
 
-`CekDulu membantu kamu melihat dampak setiap pembelian sebelum membayar, agar uang bulanan dan rencana akhir bulan tetap terjaga.`
+Keenam screenshot asli sudah diterima. Atas arahan pengguna, empat screenshot
+hanya ditampilkan dalam carousel di bingkai ponsel hero: halaman utama,
+reflektif Aman, Melewati Batas, dan Riwayat Harian. Bagian lain tetap menggunakan
+ilustrasi HTML seperti sebelum percobaan penempatan screenshot di seluruh halaman.
+Carousel berganti setiap 6 detik, dengan swipe, panah, indikator, dan kontrol
+jeda/putar. Satu catatan tulisan tangan ikut berganti sesuai layar. Ukuran frame
+tetap; autoplay berhenti saat interaksi manual, hover, di luar viewport, tab
+tersembunyi, atau pengaturan reduced motion aktif.
 
-Open Graph image:
+1. Hero: screenshot reflektif terbaru yang terbaca jelas.
+2. Cara kerja: input nominal dan hasil dari skenario konsisten.
+3. Target Aman: drawer berisi nominal dan nama tujuan.
+4. Keseharian: widget, ditambah kalender/riwayat bila membantu.
+5. Logo/ikon yang sudah tersedia tetap digunakan.
 
-Gunakan visual baru yang mengikuti tampilan aplikasi final. Feature graphic lama
-tidak digunakan sebagai representasi produk.
+Lampiran percakapan perlu ditinjau sebelum dipakai. Screenshot website hasil tes
+bukan screenshot aplikasi. Kekurangan aset dicatat di dokumen kerja, bukan
+ditampilkan sebagai placeholder di website publik.
 
-## 13. Data yang Masih Menunggu
+Paragraf utama tetap pendek. Tabel dalam dokumen ini tidak semuanya perlu
+diterjemahkan menjadi tabel pada website. Detail FAQ tampil saat dibuka.
 
-- Tautan publik Google Play.
-- Tautan Instagram.
-- Tautan TikTok.
-- Screenshot aplikasi final.
-- URL publik website untuk dimasukkan ke Kebijakan Privasi dan Google Play
-  Console.
+## Handoff task berikutnya
+
+- Task 3: hero dengan copy bagian 1 dan tema HTML yang ada.
+- Task 4: cara kerja dan Target Aman (bagian 2-3).
+- Task 5: pengaturan awal, Untuk Siapa, fitur/widget, privasi ringkas, FAQ,
+  CTA penutup, dan footer (bagian 4-10).
+- Task 6: navigasi, anchor, aksesibilitas, dan responsif pada kedua halaman.
+- Task 7: pemeriksaan isi terhadap rilis aktif, aset/tautan, browser, dan paket.

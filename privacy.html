@@ -13,6 +13,8 @@
     <link rel="apple-touch-icon" href="assets/cekdulu-icon.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="support.css">
+    <link rel="stylesheet" href="navigation.css">
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -21,7 +23,7 @@
     <header class="site-header site-header--solid">
       <div class="site-header__inner">
         <a class="brand" href="index.html" aria-label="CekDulu, kembali ke halaman utama">
-          <img src="assets/cekdulu-logo.png" alt="CekDulu">
+          <img src="assets/cekdulu-logo.png" width="945" height="201" alt="CekDulu">
         </a>
 
         <button
@@ -37,9 +39,11 @@
         </button>
 
         <nav class="main-nav" id="primary-navigation" aria-label="Navigasi utama">
+          <a href="index.html#top">Beranda</a>
           <a href="index.html#cara-kerja">Cara Kerja</a>
           <a href="index.html#fitur">Fitur</a>
-          <a href="index.html#bantuan">Bantuan</a>
+          <a href="index.html#untuk-siapa">Untuk Siapa</a>
+          <a href="index.html#bantuan">FAQ</a>
           <a href="privacy.html" aria-current="page">Privasi</a>
           <a
             class="mobile-only-link"
@@ -60,7 +64,7 @@
       </div>
     </header>
 
-    <main class="policy-main" id="policy-content">
+    <main class="policy-main" id="policy-content" tabindex="-1">
       <section class="policy-hero">
         <div class="policy-hero__inner">
           <p class="eyebrow eyebrow--green">Dokumen CekDulu</p>
@@ -95,7 +99,7 @@
         </aside>
 
         <article class="policy-article">
-          <section class="policy-intro" id="pendahuluan">
+          <section class="policy-intro" id="pendahuluan" tabindex="-1">
             <p>
               Privacy Policy ini menjelaskan bagaimana aplikasi CekDulu
               ("CekDulu", "kami", "aplikasi", atau "layanan") mengakses,
@@ -116,7 +120,7 @@
             </p>
           </section>
 
-          <section id="ringkasan">
+          <section id="ringkasan" tabindex="-1">
             <h2>1. Ringkasan Singkat</h2>
             <ul>
               <li>CekDulu dapat digunakan tanpa membuat akun atau login.</li>
@@ -129,7 +133,7 @@
             </ul>
           </section>
 
-          <section id="data-diproses">
+          <section id="data-diproses" tabindex="-1">
             <h2>2. Data yang Diproses</h2>
             <p>Data yang diproses bergantung pada fitur yang digunakan pengguna.</p>
 
@@ -193,7 +197,7 @@
             <p>CekDulu tidak meminta akses lokasi, kontak, kamera, mikrofon, SMS, riwayat panggilan, atau daftar aplikasi yang terpasang.</p>
           </section>
 
-          <section id="penggunaan-data">
+          <section id="penggunaan-data" tabindex="-1">
             <h2>3. Cara Kami Menggunakan Data</h2>
             <p>Data digunakan untuk:</p>
             <ul>
@@ -209,7 +213,7 @@
             <p>Kami tidak menjual data pribadi pengguna dan tidak membuat profil iklan berdasarkan data CekDulu.</p>
           </section>
 
-          <section id="penyimpanan">
+          <section id="penyimpanan" tabindex="-1">
             <h2>4. Penyimpanan Data</h2>
 
             <h3>4.1 Penyimpanan lokal di perangkat</h3>
@@ -225,7 +229,7 @@
             <p>Sebelum fitur login atau backup dibuka untuk umum, Privacy Policy ini dan informasi Data Safety akan diperbarui agar menjelaskan data yang dikumpulkan, tujuan penggunaan, retensi, serta cara menghapus akun dan data.</p>
           </section>
 
-          <section id="notifikasi-widget">
+          <section id="notifikasi-widget" tabindex="-1">
             <h2>5. Notifikasi dan Widget</h2>
 
             <h3>5.1 Notifikasi lokal</h3>
@@ -237,7 +241,7 @@
             <p>Widget menyimpan salinan ringkas data yang diperlukan untuk menampilkan kondisi siklus pada layar depan perangkat. Informasi widget dapat terlihat oleh orang yang memiliki akses ke layar perangkat. Pengguna dapat menghapus widget kapan saja melalui pengaturan layar depan Android.</p>
           </section>
 
-          <section id="pihak-ketiga">
+          <section id="pihak-ketiga" tabindex="-1">
             <h2>6. Layanan Pihak Ketiga</h2>
 
             <h3>6.1 Supabase</h3>
@@ -250,7 +254,7 @@
             <p>Jika pengguna memilih mengirim masukan melalui tombol email, aplikasi membuka aplikasi email yang tersedia di perangkat. Isi email baru dikirim ketika pengguna menyetujuinya melalui aplikasi email tersebut.</p>
           </section>
 
-          <section id="berbagi-data">
+          <section id="berbagi-data" tabindex="-1">
             <h2>7. Berbagi Data</h2>
             <p>Kami tidak menjual data pribadi pengguna.</p>
             <p>Data hanya dapat diproses oleh pihak lain apabila:</p>
@@ -263,13 +267,13 @@
             </ul>
           </section>
 
-          <section id="keamanan">
+          <section id="keamanan" tabindex="-1">
             <h2>8. Keamanan Data</h2>
             <p>CekDulu menerapkan langkah teknis yang wajar, termasuk penyimpanan lokal aplikasi, komunikasi jaringan terenkripsi, autentikasi Supabase, serta pembatasan akses database. Namun, tidak ada metode penyimpanan atau transmisi elektronik yang dapat dijamin sepenuhnya aman.</p>
             <p>Pengguna bertanggung jawab menjaga keamanan perangkat dan mengatur visibilitas notifikasi pada layar kunci sesuai kebutuhannya.</p>
           </section>
 
-          <section id="kontrol">
+          <section id="kontrol" tabindex="-1">
             <h2>9. Pilihan dan Kontrol Pengguna</h2>
             <p>Pengguna dapat:</p>
             <ul>
@@ -282,7 +286,7 @@
             <p>Menghapus data lokal tidak otomatis menghapus analytics anonim yang sudah dikirim ke Supabase karena data tersebut tidak selalu dapat dihubungkan kembali ke pengguna tanpa pengenal teknis yang sesuai.</p>
           </section>
 
-          <section id="penghapusan">
+          <section id="penghapusan" tabindex="-1">
             <h2>10. Permintaan Penghapusan Data</h2>
             <p>Untuk meminta akses, koreksi, informasi, atau penghapusan data yang mungkin tersimpan di Supabase, hubungi:</p>
             <p class="policy-contact"><a href="mailto:cekdulu.help@gmail.com?subject=Permintaan%20Penghapusan%20Data%20CekDulu">cekdulu.help@gmail.com</a></p>
@@ -291,17 +295,17 @@
             <p>Kami akan memproses permintaan yang dapat diverifikasi sejauh memungkinkan secara teknis dan sesuai hukum yang berlaku. Data tertentu dapat dipertahankan apabila diwajibkan oleh hukum atau diperlukan untuk keamanan dan penyelesaian sengketa, dan akan dihapus setelah alasan retensi tersebut berakhir.</p>
           </section>
 
-          <section id="anak">
+          <section id="anak" tabindex="-1">
             <h2>11. Privasi Anak</h2>
             <p>CekDulu tidak ditujukan untuk anak-anak di bawah usia 13 tahun. Kami tidak dengan sengaja mengumpulkan data pribadi anak di bawah usia tersebut. Jika kami mengetahui bahwa data pribadi anak telah dikumpulkan tanpa persetujuan yang diperlukan, kami akan mengambil langkah yang wajar untuk menghapusnya.</p>
           </section>
 
-          <section id="perubahan">
+          <section id="perubahan" tabindex="-1">
             <h2>12. Perubahan Privacy Policy</h2>
             <p>Kami dapat memperbarui Privacy Policy ini ketika fungsi aplikasi atau cara pemrosesan data berubah. Perubahan akan dipublikasikan dengan tanggal berlaku yang baru. Pengguna disarankan meninjau halaman ini secara berkala.</p>
           </section>
 
-          <section id="kontak">
+          <section id="kontak" tabindex="-1">
             <h2>13. Hubungi Kami</h2>
             <dl class="policy-details">
               <div>
@@ -322,19 +326,31 @@
       </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="site-footer__inner">
+    <footer class="site-footer footer-expanded">
+      <div class="footer-expanded__inner">
         <div class="footer-brand">
-          <img src="assets/cekdulu-logo.png" alt="CekDulu">
+          <a href="index.html#top" aria-label="CekDulu, kembali ke beranda"><img src="assets/cekdulu-logo.png" width="945" height="201" alt="CekDulu" loading="lazy"></a>
           <span>Sebelum Bayar</span>
+          <p>Temani keputusan kecilmu sebelum bayar.</p>
         </div>
-        <div class="footer-links">
-          <a href="index.html">Halaman Utama</a>
-          <a href="index.html#bantuan">Bantuan</a>
-          <a href="mailto:cekdulu.help@gmail.com">Email</a>
+        <nav class="footer-section" aria-label="Jelajahi CekDulu">
+          <strong>Kenali CekDulu</strong>
+          <a href="index.html#cara-kerja">Cara Kerja</a>
+          <a href="index.html#untuk-siapa">Untuk Siapa</a>
+          <a href="index.html#bantuan">FAQ</a>
           <a href="https://play.google.com/store/apps/details?id=com.cekdulu.sebelumbayar" target="_blank" rel="noopener noreferrer">Google Play</a>
+        </nav>
+        <div class="footer-section">
+          <strong>Bantuan &amp; privasi</strong>
+          <a href="privacy.html" aria-current="page">Kebijakan Privasi</a>
+          <a href="mailto:cekdulu.help@gmail.com">cekdulu.help@gmail.com</a>
+          <div class="footer-social">
+            <strong>Ikuti kabar CekDulu</strong>
+            <a data-social="instagram" href="https://www.instagram.com/cekdulu_5detik/" target="_blank" rel="noopener noreferrer" aria-label="Instagram CekDulu, buka tab baru">Instagram</a>
+            <a data-social="tiktok" href="https://www.tiktok.com/@cekdulu5detik" target="_blank" rel="noopener noreferrer" aria-label="TikTok CekDulu, buka tab baru">TikTok</a>
+          </div>
         </div>
-        <p>&copy; 2026 CekDulu. Seluruh hak dilindungi.</p>
+        <p class="footer-copyright">&copy; 2026 CekDulu. Seluruh hak dilindungi.</p>
       </div>
     </footer>
   </body>

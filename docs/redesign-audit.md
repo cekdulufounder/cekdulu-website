@@ -112,9 +112,13 @@ dilakukan pada tahap verifikasi setelah implementasi.
 ## Status pekerjaan
 
 - [x] Task 1: checkpoint dan audit.
-- [ ] Task 2: finalisasi copy dan susunan halaman.
-- [ ] Task 3: rekonstruksi hero.
-- [ ] Task 4: cara kerja dan Target Aman.
-- [ ] Task 5: bagian pendukung dan footer sosial.
-- [ ] Task 6: navigasi dan responsif.
+- [x] Task 2: finalisasi copy dan susunan halaman di `content-structure.md`.
+- [x] Task 3: rekonstruksi hero; verifikasi di `docs/task3-hero.md`.
+- [x] Task 4: cara kerja dan Target Aman; verifikasi di `docs/task4-stories.md`.
+- [x] Task 5: bagian pendukung dan footer sosial; verifikasi di `docs/task5-support.md`.
+- [x] Task 6: navigasi dan responsif; verifikasi di `docs/task6-navigation.md`.
 - [ ] Task 7: pengujian dan paket final.
+
+Pembaruan task 5: pengguna sudah memberikan URL Instagram dan TikTok resmi.
+Keduanya aktif di footer beranda dan Privacy Policy. Catatan aset/tautan di atas
+menggambarkan kondisi audit awal; domain dan screenshot final masih menunggu.

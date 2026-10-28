@@ -1468,7 +1468,6 @@ summary:focus-visible {
   .site-header__inner {
     min-height: 72px;
     gap: 10px;
-    gap: 10px;
   }
 
   .brand {

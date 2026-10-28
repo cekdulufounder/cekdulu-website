@@ -1,0 +1,144 @@
+/* Shared navigation rules must use the same breakpoint as script.js. */
+.site-header__inner {
+  gap: 24px;
+}
+
+.brand img {
+  height: auto;
+}
+
+.main-nav {
+  gap: 20px;
+}
+
+.main-nav > a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.main-nav .mobile-only-link {
+  display: none;
+}
+
+.main-nav > a[aria-current] {
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+
+.menu-toggle {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+}
+
+.brand:focus-visible,
+.menu-toggle:focus-visible,
+.policy-toc a:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  z-index: 1001;
+}
+
+main[tabindex="-1"]:focus,
+section[tabindex="-1"]:focus {
+  outline: none;
+}
+
+#main-content, #policy-content {
+  scroll-margin-top: 88px;
+}
+
+#top {
+  scroll-margin-top: 0;
+}
+
+@media (max-width: 980px) {
+  .site-header,
+  .site-header.is-scrolled {
+    position: fixed;
+    background: rgba(0, 20, 38, 0.98);
+  }
+
+  .site-header__inner,
+  .site-header.is-scrolled .site-header__inner {
+    min-height: 72px;
+    width: calc(100% - 32px);
+    gap: 12px;
+  }
+
+  .brand {
+    width: 112px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .site-header .header-download {
+    display: none;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 80px;
+    right: 16px;
+    left: 16px;
+    margin: 0;
+    padding: 10px;
+    display: grid;
+    gap: 2px;
+    max-height: calc(100vh - 96px);
+    max-height: calc(100dvh - 96px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px solid var(--line-dark);
+    border-radius: 8px;
+    background: #07192d;
+    box-shadow: var(--shadow);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  .main-nav > a {
+    min-height: 48px;
+    padding: 10px 14px;
+    display: flex;
+    border-radius: 6px;
+    line-height: 1.5;
+  }
+
+  .main-nav > a:hover,
+  .main-nav > a:focus-visible {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .main-nav .mobile-only-link {
+    display: flex;
+    margin-top: 6px;
+    background: var(--green);
+    color: #001f27;
+  }
+
+  .nav-open .main-nav {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .main-nav a:focus-visible {
+    outline-offset: -3px;
+  }
+}

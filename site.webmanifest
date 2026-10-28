@@ -1,0 +1,17 @@
+{
+  "name": "CekDulu",
+  "short_name": "CekDulu",
+  "description": "Lihat dampaknya sebelum uang keluar.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#001a2e",
+  "theme_color": "#001a2e",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "assets/cekdulu-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

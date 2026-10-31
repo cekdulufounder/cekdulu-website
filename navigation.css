@@ -52,9 +52,11 @@ section[tabindex="-1"]:focus {
   outline: none;
 }
 
-#main-content, #policy-content {
+#main-content, #policy-content, #faq-content {
   scroll-margin-top: 88px;
 }
+
+.legacy-anchor { display: block; height: 0; scroll-margin-top: 84px; }
 
 #top {
   scroll-margin-top: 0;

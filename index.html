@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="CekDulu membantu kamu melihat dampak setiap pembelian sebelum membayar, agar uang bulanan dan rencana akhir bulan tetap terjaga."
+      content="Tanpa repot memilah kategori atau merekap tiap malam. Cukup jeda 5 detik sebelum bayar: ketik nominal, lihat dampak, lalu putuskan bersama CekDulu."
     >
     <meta name="theme-color" content="#001a2e">
-    <title>CekDulu - Lihat Dampaknya Sebelum Bayar</title>
+    <title>CekDulu - Jaga Uangmu Tetap Terkendali, Tanpa Ribet</title>
     <link rel="icon" type="image/png" href="assets/cekdulu-icon.png">
     <link rel="apple-touch-icon" href="assets/cekdulu-icon.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="hero.css">
     <link rel="stylesheet" href="stories.css">
+    <link rel="stylesheet" href="workflow.css">
     <link rel="stylesheet" href="support.css">
     <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="carousel.css">
     <script src="script.js" defer></script>
     <script src="carousel.js" defer></script>
+    <script src="workflow.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Lewati ke konten</a>
@@ -43,18 +45,15 @@
         </button>
 
         <nav class="main-nav" id="primary-navigation" aria-label="Navigasi utama">
-          <a href="#top">Beranda</a>
           <a href="#cara-kerja">Cara Kerja</a>
-          <a href="#fitur">Fitur</a>
+          <a href="#fitur">Target Aman</a>
           <a href="#untuk-siapa">Untuk Siapa</a>
-          <a href="#bantuan">FAQ</a>
-          <a href="privacy.html">Privasi</a>
           <a
             class="mobile-only-link"
             href="https://play.google.com/store/apps/details?id=com.cekdulu.sebelumbayar"
             target="_blank"
             rel="noopener noreferrer"
-          >Download di Google Play</a>
+          >Unduh di Google Play</a>
         </nav>
 
         <a
@@ -63,7 +62,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Download
+          Unduh
         </a>
       </div>
     </header>
@@ -76,8 +75,8 @@
               <h1 id="intro-title"><img src="assets/cekdulu-logo.png" width="945" height="201" alt="CekDulu" fetchpriority="high"></h1>
               <p class="intro-tagline">Sebelum Bayar</p>
             </div>
-            <p class="intro-headline">Cara mudah untuk mulai menjaga uangmu <strong>tetap terkendali.</strong></p>
-            <p class="intro-description">Lihat dampaknya sebelum bayar, agar kamu bisa belanja lebih tenang tanpa kehilangan kendali.</p>
+            <p class="intro-headline">Jaga uang bulananmu tetap terkendali, <strong>tanpa ribet.</strong></p>
+            <p class="intro-description">Tanpa repot memilah kategori atau merekap pengeluaran tiap malam. <span class="intro-pause">Cukup jeda <strong>5 detik</strong> sebelum bayar.</span></p>
             <div class="intro-actions">
               <a class="button intro-store" href="https://play.google.com/store/apps/details?id=com.cekdulu.sebelumbayar" target="_blank" rel="noopener noreferrer" aria-label="Unduh CekDulu di Google Play">
                 <img src="assets/google-play-color.svg" width="32" height="32" alt="">
@@ -85,11 +84,7 @@
               </a>
               <a class="button intro-how" href="#cara-kerja"><span class="intro-how__icon" aria-hidden="true"><img src="assets/play.svg" width="16" height="16" alt=""></span>Lihat Cara Kerja</a>
             </div>
-            <ul class="intro-benefits" aria-label="Ringkasan CekDulu">
-              <li><span class="intro-benefit-icon" aria-hidden="true"><img src="assets/zap.svg" width="22" height="22" alt=""></span><span>Simpel<br>dan ringan</span></li>
-              <li><span class="intro-benefit-icon" aria-hidden="true"><img src="assets/shield-check.svg" width="22" height="22" alt=""></span><span>Fokus sebelum<br>bayar</span></li>
-              <li><span class="intro-benefit-icon" aria-hidden="true"><img src="assets/chart-progress.svg" width="22" height="22" alt=""></span><span>Bantu jaga<br>rencana akhir bulan</span></li>
-            </ul>
+            <p class="intro-routine">Ketik nominal. Lihat dampak. Putuskan.</p>
           </div>
           <figure class="intro-preview product-carousel" role="group" aria-roledescription="carousel" aria-label="Tampilan aplikasi CekDulu" data-carousel data-index="0">
             <div class="intro-phone carousel-phone">
@@ -134,81 +129,82 @@
       </section>
 
       <section class="section section--white product-intro" id="tentang" aria-labelledby="about-title" tabindex="-1">
+        <span class="legacy-anchor" id="mulai" aria-hidden="true"></span>
         <div class="section__inner">
           <p class="eyebrow">Apa itu CekDulu?</p>
-          <h2 id="about-title">Pagar keuangan sebelum<br>kamu membayar.</h2>
+          <h2 id="about-title">Ingin uang terkendali,<br>tapi nggak mau ribet?</h2>
           <div class="product-intro__body">
-            <p><strong>CekDulu Sebelum Bayar adalah aplikasi yang membantu kamu menjaga batas pengeluaran harian.</strong> Jika sebuah pembelian melewati batas tersebut, CekDulu menunjukkan dampaknya terhadap uang bulananmu, sehingga kamu bisa memutuskan dengan lebih tenang.</p>
+            <p><strong>Biasanya kamu mencatat setelah uang keluar. Di CekDulu, kamu melihat dampaknya sebelum membayar.</strong></p>
+            <p>CekDulu membantu menjaga uang bulananmu lewat keputusan kecil sebelum bayar. Tentukan uang yang bisa digunakan dan sampai kapan harus bertahan. CekDulu membaginya menjadi ruang harian, lalu menunjukkan dampak setiap pembelian terhadap hari-hari berikutnya dan rencana yang ingin kamu jaga.</p>
           </div>
         </div>
       </section>
 
       <section class="section section--white payment-story" id="cara-kerja" aria-labelledby="payment-title" tabindex="-1">
+        <span class="legacy-anchor" id="pengalaman" aria-hidden="true"></span>
+        <span class="legacy-anchor" id="keseharian" aria-hidden="true"></span>
+        <span class="legacy-anchor" id="tampilan" aria-hidden="true"></span>
         <div class="section__inner">
           <div class="section-heading section-heading--wide">
             <p class="eyebrow">Saat ingin membeli sesuatu</p>
-            <h2 id="payment-title">Sebelum bayar,<br>lihat apa yang berubah.</h2>
-            <p>Mau pesan makanan, belanja, atau membeli sesuatu yang sudah kamu incar? Masukkan nominalnya untuk melihat dampaknya pada uang yang masih bisa digunakan.</p>
+            <h2 id="payment-title">Cukup tiga langkah<br>sebelum bayar.</h2>
           </div>
 
-          <ol class="payment-steps">
-            <li>
-              <span class="payment-step-number" aria-hidden="true">01</span>
-              <h3>Ketik nominal</h3>
-              <p>Buka CekDulu dan masukkan jumlah yang ingin kamu bayar.</p>
-            </li>
-            <li>
-              <span class="payment-step-number" aria-hidden="true">02</span>
-              <h3>Lihat dampaknya</h3>
-              <p>Periksa sisa Ruang Hari Ini. Jika melewati batas, lihat pengaruhnya pada Hasil Terjaga Harian atau ruang untuk hari berikutnya.</p>
-            </li>
-            <li>
-              <span class="payment-step-number" aria-hidden="true">03</span>
-              <h3>Putuskan</h3>
-              <p>Lanjutkan jika sesuai kebutuhanmu, atau batalkan jika ingin menundanya. Keputusan tetap di tanganmu.</p>
-            </li>
-          </ol>
+          <fieldset class="workflow-scenarios" data-workflow-scenarios hidden>
+            <legend>Pilih contoh pembelian</legend>
+            <input type="radio" name="workflow-scenario" id="workflow-scenario-safe" value="safe">
+            <label for="workflow-scenario-safe">Masih aman</label>
+            <input type="radio" name="workflow-scenario" id="workflow-scenario-over" value="over" checked>
+            <label for="workflow-scenario-over">Melewati batas</label>
+          </fieldset>
 
-          <figure class="payment-example" id="pengalaman" aria-labelledby="payment-example-caption">
-            <figcaption id="payment-example-caption">
-              <span class="story-kicker">CONTOH SEBELUM BAYAR</span>
-              <strong>Ruang hari ini Rp100.000.<br>Kamu ingin memakai Rp25.000.</strong>
-              <span>Contoh ini dimulai tanpa pengeluaran lain hari ini.</span>
-            </figcaption>
-            <div class="payment-comparison">
-              <div class="payment-input">
-                <span class="story-label">Nominal yang kamu cek</span>
-                <strong>Rp25.000</strong>
-                <span class="payment-direction" aria-hidden="true">&rarr;</span>
-              </div>
-              <div class="payment-result">
-                <div class="payment-result-heading">
-                  <span class="story-label">Sisa ruang setelah bayar</span>
-                  <span class="payment-status">AMAN</span>
+          <div class="workflow-demo" data-workflow data-phase="input" data-scenario="safe">
+            <ol class="payment-steps" aria-label="Tiga langkah sebelum bayar">
+              <li data-workflow-step="0">
+                <span class="payment-step-number" aria-hidden="true">01</span>
+                <h3><button class="workflow-step-button" type="button" data-workflow-select="0" aria-controls="workflow-screen" aria-describedby="workflow-description-0" disabled>Ketik nominal</button></h3>
+                <p id="workflow-description-0">Buka CekDulu dan masukkan jumlah yang ingin kamu bayar.</p>
+              </li>
+              <li data-workflow-step="1">
+                <span class="payment-step-number" aria-hidden="true">02</span>
+                <h3><button class="workflow-step-button" type="button" data-workflow-select="1" aria-controls="workflow-screen" aria-describedby="workflow-description-1" disabled>Lihat dampak</button></h3>
+                <p id="workflow-description-1">Masih aman? Atau ruang untuk hari berikutnya perlu disesuaikan? CekDulu menunjukkan dampaknya sebelum kamu lanjut.</p>
+              </li>
+              <li data-workflow-step="2">
+                <span class="payment-step-number" aria-hidden="true">03</span>
+                <h3><button class="workflow-step-button" type="button" data-workflow-select="2" aria-controls="workflow-screen" aria-describedby="workflow-description-2" disabled>Putuskan</button></h3>
+                <p id="workflow-description-2">Lanjut beli atau tunda dulu. Keputusan tetap di tanganmu.</p>
+              </li>
+            </ol>
+
+            <figure class="workflow-preview" aria-labelledby="workflow-caption">
+              <div class="workflow-phone">
+                <div class="workflow-screen" id="workflow-screen">
+                  <div class="workflow-scene" data-workflow-scene="input">
+                    <img class="workflow-shot" src="assets/app-home.jpg" width="762" height="1536" alt="Contoh halaman utama: ruang hari ini Rp64.000 sebelum mengecek pembelian Rp25.000." loading="lazy" decoding="async">
+                    <div class="workflow-amount" data-workflow-amount aria-label="Nominal pembelian contoh">
+                      <span data-workflow-amount-text>Rp25.000</span>
+                    </div>
+                  </div>
+                  <div class="workflow-scene" data-workflow-scene="result" hidden>
+                    <img class="workflow-shot" data-workflow-result src="assets/reflection-safe.jpg" width="762" height="1536" alt="Contoh hasil Aman: setelah pembelian Rp25.000, sisa ruang Rp39.000 dan total terpakai hari ini Rp61.000." loading="lazy" decoding="async">
+                    <div class="workflow-focus workflow-focus--impact" data-workflow-focus="impact" aria-hidden="true" hidden></div>
+                    <div class="workflow-focus workflow-focus--decision" data-workflow-focus="decision" aria-hidden="true" hidden></div>
+                  </div>
                 </div>
-                <strong class="payment-result-amount">Rp75.000</strong>
-                <div class="payment-result-track" aria-hidden="true"><span></span></div>
-                <span class="payment-result-detail">Terpakai Rp25.000 <span>| 25%</span></span>
               </div>
-            </div>
-          </figure>
+              <figcaption id="workflow-caption">
+                <span data-workflow-caption>Contoh pembelian Rp25.000</span>
+                <span class="workflow-controls" role="group" aria-label="Kontrol contoh" data-workflow-controls hidden>
+                  <button class="workflow-control" type="button" data-workflow-toggle aria-label="Jeda contoh" title="Jeda contoh"><img src="assets/pause.svg" width="16" height="16" alt=""></button>
+                  <button class="workflow-control" type="button" data-workflow-replay aria-label="Putar ulang contoh" title="Putar ulang contoh"><img src="assets/rotate-ccw.svg" width="16" height="16" alt=""></button>
+                </span>
+              </figcaption>
+              <span class="workflow-announcement" role="status" aria-live="polite" aria-atomic="true" data-workflow-announcement></span>
+            </figure>
+          </div>
 
-          <p class="payment-note"><strong>Mengecek nominal belum berarti mencatat pembayaran.</strong> Kamu melihat dampaknya lebih dulu, lalu memilih lanjut atau batal. Pembayaran sebenarnya tetap dilakukan di tempat kamu bertransaksi.</p>
-
-          <dl class="payment-statuses" aria-label="Arti status pembayaran">
-            <div class="payment-statuses__safe">
-              <dt>Aman</dt>
-              <dd>Penggunaan masih dalam batas harian yang dihitung CekDulu.</dd>
-            </div>
-            <div class="payment-statuses__near">
-              <dt>Mendekati batas</dt>
-              <dd>Ruang untuk pengeluaran hari ini mulai menipis.</dd>
-            </div>
-            <div class="payment-statuses__over">
-              <dt>Melewati batas</dt>
-              <dd>Pengeluaran melampaui ruang hari ini. Periksa dampaknya sebelum lanjut.</dd>
-            </div>
-          </dl>
+          <p class="payment-note"><strong>Cek dulu, baru bayar.</strong> Pembayaran tetap dilakukan di tempat kamu bertransaksi.</p>
         </div>
       </section>
 
@@ -217,9 +213,9 @@
           <div class="goal-layout">
             <div class="goal-copy">
               <p class="eyebrow eyebrow--cyan">Target Aman</p>
-              <h2 id="goal-title">Mau sisihkan uang untuk sesuatu yang berarti buatmu?</h2>
-              <p>Jalan-jalan, sesuatu untuk diri sendiri, atau sekadar punya tabungan. Tentukan jumlah yang ingin tetap ada di akhir siklus sebagai <strong>Target Aman</strong>.</p>
-              <p>CekDulu memperhitungkannya saat membagi ruang untuk kebutuhan sehari-hari.</p>
+              <h2 id="goal-title">Mau ada uang yang tetap tersisa? Bisa.</h2>
+              <p>Untuk jalan-jalan, self reward, atau sekadar ditabung. Tentukan jumlah yang ingin kamu jaga sebagai <strong>Target Aman</strong>. CekDulu memperhitungkannya dalam ruang harianmu.</p>
+              <p class="goal-optional"><strong>Opsional. Tanpa target pun tetap bisa mulai.</strong></p>
             </div>
             <figure class="goal-example" aria-labelledby="goal-example-caption">
               <div class="goal-example-brand">
@@ -236,46 +232,13 @@
           </div>
 
           <ul class="goal-ideas" aria-label="Contoh tujuan Target Aman">
-            <li class="goal-idea goal-idea--reward"><span class="goal-idea-icon" aria-hidden="true"><img src="assets/gift.svg" width="22" height="22" alt="" loading="lazy"></span><h3>Self reward</h3><p>Sesuatu yang sudah lama kamu inginkan.</p></li>
-            <li class="goal-idea goal-idea--travel"><span class="goal-idea-icon" aria-hidden="true"><img src="assets/plane.svg" width="22" height="22" alt="" loading="lazy"></span><h3>Jalan-jalan</h3><p>Rencana pergi yang ingin kamu siapkan.</p></li>
-            <li class="goal-idea goal-idea--save"><span class="goal-idea-icon" aria-hidden="true"><img src="assets/piggy-bank.svg" width="22" height="22" alt="" loading="lazy"></span><h3>Simpan</h3><p>Uang yang ingin tetap tersisa.</p></li>
-            <li class="goal-idea goal-idea--custom"><span class="goal-idea-icon" aria-hidden="true"><img src="assets/pencil.svg" width="22" height="22" alt="" loading="lazy"></span><h3>Rencanamu sendiri</h3><p>Beri nama tujuan yang berarti buatmu.</p></li>
+            <li class="goal-idea goal-idea--reward"><span class="goal-idea-icon" aria-hidden="true"><img src="assets/gift.svg" width="18" height="18" alt="" loading="lazy"></span><span>Self reward</span></li>
+            <li class="goal-idea goal-idea--travel"><span class="goal-idea-icon" aria-hidden="true"><img src="assets/plane.svg" width="18" height="18" alt="" loading="lazy"></span><span>Jalan-jalan</span></li>
+            <li class="goal-idea goal-idea--save"><span class="goal-idea-icon" aria-hidden="true"><img src="assets/piggy-bank.svg" width="18" height="18" alt="" loading="lazy"></span><span>Simpan</span></li>
+            <li class="goal-idea goal-idea--custom"><span class="goal-idea-icon" aria-hidden="true"><img src="assets/pencil.svg" width="18" height="18" alt="" loading="lazy"></span><span>Rencanamu sendiri</span></li>
           </ul>
 
-          <div class="goal-notes">
-            <p>Setiap kali ingin membayar, kamu bisa melihat pengaruhnya terhadap ruang uangmu dan rencana yang sedang dijaga.</p>
-            <p><strong>Belum punya target? Tetap bisa mulai.</strong> Fokuskan siklusmu untuk membuat uang cukup sampai pemasukan berikutnya.</p>
-          </div>
-          <p class="goal-footnote">Target Aman membantu perhitungan ruang harian. Uangnya tidak dipindahkan ke rekening atau tabungan lain oleh CekDulu.</p>
-        </div>
-      </section>
-
-      <section class="section section--white setup-story" id="mulai" aria-labelledby="setup-title" tabindex="-1">
-        <div class="section__inner">
-          <div class="section-heading">
-            <p class="eyebrow">Sesuai kondisi uangmu</p>
-            <h2 id="setup-title">Mulainya cukup dengan tiga hal.</h2>
-            <p>Sesuaikan dengan kondisi uangmu sekarang.</p>
-          </div>
-          <ol class="setup-steps">
-            <li><span class="setup-number" aria-hidden="true">01</span><div><h3>Dana Kendali</h3><p>Uang yang biasa kamu pakai untuk kebutuhan sehari-hari di luar kebutuhan tetap. Bukan seluruh gaji jika sebagian sudah disiapkan untuk kewajiban lain.</p></div></li>
-            <li><span class="setup-number" aria-hidden="true">02</span><div><h3>Durasi Siklus</h3><p>Tentukan sampai kapan uang ini harus bertahan, biasanya sampai sebelum gajian atau pemasukan berikutnya. Tidak harus mengikuti tanggal awal dan akhir bulan.</p></div></li>
-            <li><span class="setup-number" aria-hidden="true">03</span><div><h3>Target Aman <span class="setup-optional">Opsional</span></h3><p>Jumlah yang ingin tetap ada di akhir siklus. Isi sesuai rencanamu, atau mulai tanpa target jika yang terpenting adalah uang cukup sampai akhir periode.</p></div></li>
-          </ol>
-          <div class="setup-example" aria-labelledby="setup-example-title">
-            <div class="setup-example-copy">
-              <h3 id="setup-example-title">Contoh saat memulai siklus</h3>
-              <p>Dari Rp3.000.000, kamu ingin menjaga Rp600.000. Sisa Rp2.400.000 dibagi untuk 30 hari.</p>
-              <p class="setup-result-label">Ruang Harian awalmu</p>
-              <strong class="setup-result">Rp80.000<span>/hari</span></strong>
-            </div>
-            <dl class="setup-values">
-              <div><dt>Dana Kendali</dt><dd>Rp3.000.000</dd></div>
-              <div><dt>Target Aman</dt><dd>Rp600.000</dd></div>
-              <div><dt>Durasi Siklus</dt><dd>30 hari</dd></div>
-            </dl>
-          </div>
-          <p class="setup-footnote">Ruang harian dapat menyesuaikan mengikuti pengeluaran dan perubahan siklus.</p>
+          <p class="goal-footnote">Target Aman membantu perhitungan. CekDulu tidak memindahkan atau menyimpan uangmu.</p>
         </div>
       </section>
 
@@ -288,140 +251,13 @@
             <p class="audience-quote">Bukan soal berapa yang kamu beli, tapi bagaimana kamu tetap sampai tujuan.</p>
             <div class="audience-intro-copy">
               <p class="eyebrow">Untuk keseharianmu</p>
-              <h2 id="audience-title">Untuk kamu yang ingin belanja lebih tenang dan tetap punya kendali.</h2>
-              <p>CekDulu cocok untuk siapa pun yang ingin memahami dampak pembelian dan menjaga rencana keuangannya.</p>
+              <h2 id="audience-title">Buat kamu yang ingin menjaga uang, tapi tidak mau ribet.</h2>
             </div>
           </div>
           <div class="audience-list">
-            <article><span class="audience-label">PUNYA RENCANA</span><h3>Ada rencana, tetapi uangnya habis duluan.</h3><p>Saat pemasukan datang kamu sudah punya tujuan. Di tengah jalan, pengeluaran sehari-hari membuat rencana itu kembali tertunda.</p></article>
-            <article><span class="audience-label">INGIN LEBIH YAKIN</span><h3>Ingin membeli, tetapi belum yakin masih aman.</h3><p>Kamu ingin tahu apakah pembelian ini masih menyisakan cukup ruang untuk kebutuhan berikutnya.</p></article>
-            <article><span class="audience-label">FOKUS SAMPAI AKHIR</span><h3>Yang penting cukup sampai pemasukan berikutnya.</h3><p>Belum ada target khusus. Kamu hanya ingin lebih mudah melihat batas penggunaan uang selama periode yang kamu tentukan.</p></article>
-          </div>
-          <p class="audience-close">Baik dari gaji, uang saku, maupun pemasukan lainnya, kamu bisa mulai dari uang yang memang tersedia untuk kamu kendalikan.</p>
-        </div>
-      </section>
-
-      <section class="section section--white daily-story" id="keseharian" aria-labelledby="daily-title" tabindex="-1">
-        <div class="section__inner">
-          <div class="section-heading">
-            <p class="eyebrow">Satu siklus, tetap terbaca</p>
-            <h2 id="daily-title">Kondisi uangmu,<br>lebih mudah terlihat.</h2>
-            <p>Setelah mulai, gunakan ringkasan ini untuk mengikuti perjalanan siklusmu.</p>
-          </div>
-          <dl class="daily-features">
-            <div><dt>Ruang Hari Ini</dt><dd>Acuan uang yang masih bisa kamu gunakan hari ini berdasarkan kondisi siklus yang tercatat.</dd></div>
-            <div><dt>Kalender Siklus</dt><dd>Lihat tanggal dan ringkasan perjalanan harian dalam siklusmu.</dd></div>
-            <div><dt>Hasil Terjaga Harian</dt><dd>Ruang dari hari sebelumnya yang tidak terpakai dapat membantu menutup pengeluaran di atas batas harian.</dd></div>
-            <div><dt>Riwayat dan laporan</dt><dd>Tinjau catatan penggunaan dan ringkasan hasil saat siklus selesai.</dd></div>
-          </dl>
-          <div class="widget-story" id="tampilan">
-            <div class="widget-copy">
-              <h3>Biar ingat sebelum uang keluar.</h3>
-              <p>Letakkan widget CekDulu di layar depan. Ringkasan kondisi siklus lebih mudah terlihat, sehingga kamu lebih mudah ingat untuk cek sebelum membayar.</p>
-            </div>
-            <figure class="widget-example">
-              <div class="widget-sample" role="img" aria-label="Contoh ringkasan widget: cek dulu sebelum bayar, sisa ruang Rp60.000 dari Rp80.000, hari ke 21 dari 30.">
-                <div class="widget-sample-main" aria-hidden="true">
-                  <strong>Cek dulu sebelum bayar</strong>
-                  <div class="widget-sample-track"><span></span></div>
-                  <div class="widget-sample-balance"><span>Sisa ruang</span><strong>Rp60.000</strong></div>
-                </div>
-                <div class="widget-sample-day" aria-hidden="true"><span>Hari ke</span><strong>21</strong><span>dari 30</span></div>
-              </div>
-              <figcaption>Contoh ringkasan widget di layar depan.</figcaption>
-            </figure>
-          </div>
-          <div class="habit-support">
-            <div><h3>Pengingat harian</h3><p>Bantu ingat untuk kembali mengecek kondisi siklus. Kamu bisa mengaturnya melalui Pengaturan.</p></div>
-            <div><h3>Lencana progres</h3><p>Lihat ringkasan kendali dan kebiasaan menggunakan CekDulu.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--trust support-trust" id="privasi" aria-labelledby="trust-title" tabindex="-1">
-        <div class="section__inner trust-layout">
-          <div class="trust-copy">
-            <p class="eyebrow">Kendali tetap milikmu</p>
-            <h2 id="trust-title">Kamu tetap memegang kendali atas uangmu.</h2>
-            <p>CekDulu menghitung dari nominal yang kamu masukkan. Aplikasi tidak terhubung ke rekening atau dompet digital, dan tidak memindahkan maupun memotong uangmu.</p>
-            <a class="text-link text-link--dark" href="privacy.html">Baca Kebijakan Privasi</a>
-          </div>
-          <div>
-            <ul class="trust-list">
-              <li>Mulai menggunakan aplikasi tanpa membuat akun.</li>
-              <li>Data keuangan utama disimpan di perangkatmu.</li>
-              <li>Tidak meminta PIN atau kata sandi bank.</li>
-            </ul>
-            <p class="trust-data-note">Saat online, data penggunaan minimum tanpa nominal keuangan dapat dikirim untuk membantu memperbaiki aplikasi. Rinciannya tersedia di Kebijakan Privasi.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--white support-faq" id="bantuan" aria-labelledby="faq-title" tabindex="-1">
-        <div class="section__inner faq-layout">
-          <div class="section-heading faq-heading">
-            <p class="eyebrow">Bantuan singkat</p>
-            <h2 id="faq-title">Hal yang mungkin ingin kamu tanyakan.</h2>
-            <p>Masih ada yang ingin ditanyakan? Hubungi kami di <a href="mailto:cekdulu.help@gmail.com">cekdulu.help@gmail.com</a>.</p>
-          </div>
-          <div class="faq-list">
-            <div class="faq-group" role="group" aria-labelledby="faq-group-1">
-              <h3 id="faq-group-1">Mulai menggunakan</h3>
-              <details>
-                <summary>Apakah CekDulu gratis?</summary>
-                <p>Versi CekDulu saat ini dapat digunakan gratis. Kamu bisa mengatur siklus dan mengecek dampak pengeluaran sebelum membayar.</p>
-              </details>
-              <details>
-                <summary>Apakah harus login atau selalu online?</summary>
-                <p>Kamu bisa mulai tanpa login. Pengaturan siklus, pengecekan nominal, dan catatan utama berjalan di perangkat sehingga dapat digunakan saat offline. Koneksi internet diperlukan untuk mengunduh atau memperbarui aplikasi.</p>
-              </details>
-              <details>
-                <summary>Apakah tersedia untuk iPhone?</summary>
-                <p>Saat ini CekDulu tersedia untuk Android melalui Google Play.</p>
-              </details>
-            </div>
-            <div class="faq-group" role="group" aria-labelledby="faq-group-2">
-              <h3 id="faq-group-2">Menjalankan siklus</h3>
-              <details>
-                <summary>Apa bedanya Dana Kendali dan saldo rekening?</summary>
-                <p>Dana Kendali adalah uang yang kamu tentukan untuk kebutuhan sehari-hari di luar kebutuhan tetap. Nilainya kamu masukkan sendiri, bukan saldo yang dibaca dari rekening.</p>
-              </details>
-              <details>
-                <summary>Apakah Target Aman wajib diisi?</summary>
-                <p>Tidak. Kamu bisa memulai tanpa Target Aman dan fokus menjaga Dana Kendali cukup sampai akhir siklus. Jika digunakan, Target Aman diperhitungkan saat menentukan ruang harian; uangnya tidak dipindahkan oleh aplikasi.</p>
-              </details>
-              <details>
-                <summary>Apa yang terjadi jika pengeluaran melewati Ruang Hari Ini?</summary>
-                <p>CekDulu memperlihatkan dampaknya sebelum kamu melanjutkan. Hasil Terjaga Harian, jika tersedia, dapat membantu menutup kelebihannya. Jika belum cukup, ruang untuk hari-hari berikutnya dapat berubah. Periksa penyesuaian yang ditampilkan agar kamu tahu kondisi setelah pembayaran.</p>
-              </details>
-              <details>
-                <summary>Bagaimana kalau lupa membuka CekDulu selama beberapa hari?</summary>
-                <p>Saat diminta memperbarui periode yang terlewat, kamu bisa memilih tidak ada pengeluaran, tidak ingat, atau mengisi total pengeluaran. Total gabungan dicatat untuk periode itu tanpa menebak pengeluaran pada masing-masing tanggal.</p>
-              </details>
-              <details>
-                <summary>Bagaimana kalau hari ini tidak ada pengeluaran?</summary>
-                <p>Gunakan pilihan <strong>Tandai hari ini tanpa bayar</strong>. Kondisi hari itu tercatat dan kebiasaan cek dulu tetap terjaga tanpa perlu membuat pengeluaran.</p>
-              </details>
-              <details>
-                <summary>Apa yang terjadi setelah siklus selesai?</summary>
-                <p>Kamu bisa meninjau ringkasan siklus, lalu mengisi Dana Kendali, Durasi Siklus, dan Target Aman untuk periode berikutnya sesuai kondisi terbaru.</p>
-              </details>
-            </div>
-            <div class="faq-group" role="group" aria-labelledby="faq-group-3">
-              <h3 id="faq-group-3">Data dan bantuan</h3>
-              <details>
-                <summary>Apakah data bisa kembali jika aplikasi dihapus atau saya ganti HP?</summary>
-                <p>Data keuangan utama disimpan di perangkat. Backup dan pemulihan melalui akun belum tersedia untuk umum pada versi saat ini. Menghapus aplikasi atau data aplikasi, mereset HP, maupun mengganti HP dapat membuat catatan tidak dapat dipulihkan.</p>
-              </details>
-              <details>
-                <summary>Bagaimana kalau angka yang ditampilkan tidak sesuai?</summary>
-                <p>Periksa Dana Kendali, durasi, dan pengeluaran yang sudah kamu masukkan, termasuk hari yang terlewat. Perhitungan mengikuti data yang tercatat. Jika masih ada kendala, kirim penjelasan dan versi aplikasi ke <a href="mailto:cekdulu.help@gmail.com">cekdulu.help@gmail.com</a>. Jangan sertakan PIN, kata sandi, atau informasi rekening.</p>
-              </details>
-              <details>
-                <summary>Bagaimana cara mengirim masukan?</summary>
-                <p>Kirim pengalaman atau saranmu ke <a href="mailto:cekdulu.help@gmail.com">cekdulu.help@gmail.com</a>. Ceritakan bagian yang membantu atau masih membingungkan agar kami bisa memahami kebutuhanmu.</p>
-              </details>
-            </div>
+            <article><h3>Keseharian sudah cukup sibuk.</h3><p>Tidak ingin menghabiskan waktu mengurus kategori dan membaca banyak laporan.</p></article>
+            <article><h3>Ingin cara yang lebih praktis.</h3><p>Cukup ketik nominal, lihat dampak, lalu putuskan sebelum bayar.</p></article>
+            <article><h3>Ingin belanja lebih tenang.</h3><p>Tetap menikmati pilihan hari ini sambil menjaga rencana berikutnya.</p></article>
           </div>
         </div>
       </section>
@@ -429,8 +265,7 @@
       <section class="download-section download-invitation" id="download" aria-labelledby="download-title" tabindex="-1">
         <div class="download-section__inner">
           <div class="download-invitation__copy">
-            <p class="eyebrow">Mulai sekarang</p>
-            <h2 id="download-title">Belanja dengan lebih tenang,<br>mulai dari CekDulu.</h2>
+            <h2 id="download-title">Mudah dimulai.<br>Membantu sejak hari pertama.</h2>
             <p>Unduh sekarang dan rasakan bedanya.</p>
             <a class="button intro-store download-invitation__store" href="https://play.google.com/store/apps/details?id=com.cekdulu.sebelumbayar" target="_blank" rel="noopener noreferrer" aria-label="Unduh CekDulu di Google Play">
               <img src="assets/google-play-color.svg" width="28" height="28" alt="" loading="lazy">
@@ -452,13 +287,14 @@
         <nav class="footer-section" aria-label="Jelajahi CekDulu">
           <strong>Kenali CekDulu</strong>
           <a href="#cara-kerja">Cara Kerja</a>
+          <a href="#fitur">Target Aman</a>
           <a href="#untuk-siapa">Untuk Siapa</a>
-          <a href="#bantuan">FAQ</a>
+          <a id="bantuan" href="faq.html">FAQ</a>
           <a href="https://play.google.com/store/apps/details?id=com.cekdulu.sebelumbayar" target="_blank" rel="noopener noreferrer">Google Play</a>
         </nav>
         <div class="footer-section">
           <strong>Bantuan &amp; privasi</strong>
-          <a href="privacy.html">Kebijakan Privasi</a>
+          <a id="privasi" href="privacy.html">Kebijakan Privasi</a>
           <a href="mailto:cekdulu.help@gmail.com">cekdulu.help@gmail.com</a>
           <div class="footer-social">
             <strong>Ikuti kabar CekDulu</strong>

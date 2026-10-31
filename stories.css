@@ -227,7 +227,7 @@
 
 .payment-note {
   max-width: 890px;
-  margin: 28px 0 36px;
+  margin: 28px 0 0;
   padding-left: 18px;
   border-left: 3px solid var(--green);
   color: var(--text-muted);
@@ -295,6 +295,10 @@
   color: var(--white);
 }
 
+.goal-copy .goal-optional strong {
+  color: #4fe0b6;
+}
+
 .goal-example {
   margin: 0;
 }
@@ -354,28 +358,29 @@
 .goal-ideas {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  gap: 16px 24px;
   list-style: none;
-  margin: 60px 0 40px;
+  margin: 36px 0 0;
   padding: 0;
 }
 
 .goal-idea {
   min-width: 0;
-  min-height: 190px;
-  padding: 24px;
-  border: 1px solid #2a4056;
-  border-radius: 8px;
-  background: #10263b;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .goal-idea-icon {
-  width: 36px;
-  height: 36px;
-  margin-bottom: 20px;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
   display: grid;
   place-items: center;
-  border-radius: 8px;
+  border-radius: 6px;
   background: #f5cbb6;
 }
 
@@ -494,22 +499,14 @@
 
   .goal-ideas {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-top: 40px;
-    gap: 14px;
-  }
-
-  .goal-idea {
-    padding: 20px;
+    margin-top: 28px;
+    gap: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .goal-ideas {
     gap: 12px;
-  }
-
-  .goal-idea {
-    padding: 16px;
   }
 
   .goal-ideas h3 {

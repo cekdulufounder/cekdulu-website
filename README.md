@@ -14,10 +14,12 @@ statis, tanpa instalasi dependency atau proses build.
 ## Struktur
 
 - `index.html`: halaman utama.
+- `faq.html`: FAQ dan bantuan.
 - `privacy.html`: Kebijakan Privasi.
 - `styles.css` dan CSS komponen: tampilan responsif.
 - `script.js`: menu, FAQ, dan pratinjau gambar.
 - `carousel.js`: carousel screenshot di hero.
+- `workflow.css` dan `workflow.js`: visual dan animasi tiga langkah Cara Kerja.
 - `assets/`: gambar dan ikon lokal.
 - `docs/` dan `content-structure.md`: catatan kerja, bukan konten untuk deployment.
 

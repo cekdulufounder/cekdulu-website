@@ -1,5 +1,10 @@
 # Naskah dan struktur website CekDulu
 
+> Pembaruan 31 Oktober 2026: dokumen ini menjadi arsip rancangan sebelumnya.
+> Acuan aktif untuk rekonstruksi enam bagian dan copy terbaru adalah
+> [simplicity-reconstruction.md](docs/simplicity-reconstruction.md).
+> HTML belum diubah pada task 1 rekonstruksi ini.
+
 Tanggal: 28 Oktober 2026.
 Status: task 2 selesai; sumber copy untuk implementasi task 3-6.
 Dokumen ini belum mengubah tampilan HTML.

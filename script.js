@@ -9,6 +9,17 @@
   var toastTimer = null;
   var mobileNavigation = window.matchMedia("(max-width: 980px)");
 
+  // Older shared homepage links now lead to their dedicated pages.
+  if (document.querySelector(".hero--intro")) {
+    function openLegacyPage() {
+      var pages = { "#bantuan": "faq.html", "#privasi": "privacy.html" };
+      var target = pages[window.location.hash];
+      if (target) window.location.replace(target);
+    }
+    openLegacyPage();
+    window.addEventListener("hashchange", openLegacyPage);
+  }
+
   function setMenu(open) {
     if (!menuToggle || !navigation) return;
 
@@ -29,8 +40,8 @@
   function updateCurrentLink() {
     if (!navigation) return;
     var section = window.location.hash || "#top";
-    if (["#mulai", "#keseharian", "#tampilan"].indexOf(section) !== -1) section = "#fitur";
-    if (section === "#pengalaman") section = "#cara-kerja";
+    if (section === "#mulai") section = "#tentang";
+    if (["#pengalaman", "#keseharian", "#tampilan"].indexOf(section) !== -1) section = "#cara-kerja";
     navigation.querySelectorAll('a[href^="#"]').forEach(function (link) {
       if (link.getAttribute("href") === section) {
         link.setAttribute("aria-current", "location");

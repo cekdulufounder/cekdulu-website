@@ -23,6 +23,8 @@
 .intro-headline { max-width: 590px; margin-bottom: 18px; font-size: 30px; line-height: 1.4; font-weight: 500; }
 .intro-headline strong { color: #4fe0b6; font-weight: 750; }
 .intro-description { max-width: 505px; margin-bottom: 30px; color: var(--text-soft); font-size: 17px; line-height: 1.7; }
+.intro-pause { display: block; margin-top: 10px; }
+.intro-pause strong { color: var(--white); font-weight: 700; }
 .intro-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 .intro-actions .button { min-height: 66px; border-radius: 10px; }
 .intro-store { min-width: 196px; gap: 14px; background: #0b2b50; border-color: #325778; color: var(--white); }
@@ -35,10 +37,7 @@
 .intro-how:hover { background: #ffffff; }
 .intro-how__icon { width: 29px; height: 29px; flex: 0 0 29px; display: grid; place-items: center; border-radius: 50%; background: #0b2b50; }
 .intro-how__icon img { filter: brightness(0) invert(1); }
-.intro-benefits { max-width: 500px; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 12px; list-style: none; }
-.intro-benefits li { min-width: 0; display: flex; align-items: center; gap: 8px; font-size: 11px; line-height: 1.5; color: var(--text-soft); }
-.intro-benefit-icon { width: 25px; height: 25px; flex: 0 0 25px; display: grid; place-items: center; border-radius: 6px; background: #e8edf5; }
-.intro-benefit-icon img { width: 16px; height: 16px; filter: invert(14%) sepia(33%) saturate(1731%) hue-rotate(174deg) brightness(92%) contrast(95%); }
+.intro-routine { margin: 22px 0 0; color: var(--text-soft); font-size: 14px; line-height: 1.6; font-weight: 600; }
 
 .intro-preview { position: relative; margin: 0; min-width: 0; justify-self: center; }
 .intro-annotation { position: absolute; right: -150px; width: 126px; margin: 0; font-family: "Segoe Print", "Comic Sans MS", cursive; font-size: 12px; font-weight: 500; line-height: 1.65; color: #c4e5df; }
@@ -88,7 +87,7 @@
   .intro-headline { font-size: 24px; }
   .intro-description { font-size: 16px; margin-bottom: 24px; }
   .intro-actions { gap: 10px; }
-  .intro-benefits { margin-top: 20px; gap: 12px; }
+  .intro-routine { margin-top: 20px; }
   .intro-preview { display: flex; align-items: center; gap: 32px; }
   .intro-preview figcaption { max-width: 170px; text-align: left; }
   .intro-next { width: calc(100% - 32px); min-height: 58px; }
@@ -96,8 +95,6 @@
 
 @media (max-width: 480px) {
   .intro-actions .button { width: 100%; }
-  .intro-benefits { gap: 12px; }
-  .intro-benefits li { flex-direction: column; align-items: flex-start; gap: 7px; font-size: 10px; }
   .intro-preview { display: block; }
   .intro-preview figcaption { max-width: none; text-align: center; }
   .intro-phone { transform: none; }

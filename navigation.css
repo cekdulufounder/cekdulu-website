@@ -3,6 +3,10 @@
   gap: 24px;
 }
 
+.site-header .brand {
+  width: 107.2px;
+}
+
 .brand img {
   height: auto;
 }
@@ -76,8 +80,8 @@ section[tabindex="-1"]:focus {
     gap: 12px;
   }
 
-  .brand {
-    width: 112px;
+  .site-header .brand {
+    width: 89.6px;
   }
 
   .menu-toggle {

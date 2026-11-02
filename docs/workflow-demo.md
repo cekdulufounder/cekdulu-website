@@ -182,7 +182,7 @@ Tes task 3:
   asli, FAQ, copy Untuk Siapa, dan isi Kebijakan Privasi tidak diubah.
 - Tidak ada push atau publikasi. Task 4 demo dan task 5 final website masih menunggu.
 
-## Tambahan: contoh melewati batas
+## Tambahan: contoh melewati batas (riwayat, diganti 1 November 2026)
 
 Pengguna meminta manfaat saat melewati batas juga diperlihatkan. Tiga langkah
 tetap sama, dengan dua opsi pada segmented control native radio:
@@ -223,3 +223,34 @@ Verifikasi tambahan:
   `work/check-workflow-animation.cjs` disesuaikan ke nominal awal Rp250.000.
 - `node --check workflow.js` dan `git diff --check` lulus. Tidak ada push atau publikasi.
 - Task 4 demo dan task 5 final website tetap belum ditandai selesai.
+
+## Screenshot melewati batas terbaru: 1 November 2026
+
+- Pengguna mengonfirmasi pembelian Rp1.000.000 dan memberikan ulang file
+  `Downloads/Melewati batas.PNG` (424 x 888). File disalin utuh menjadi
+  `assets/reflection-over-limit-current.png`, tanpa mengubah piksel atau angka.
+  Dipakai di carousel hero dan hasil simulasi Cara Kerja.
+- Contoh ini adalah pembayaran pertama: ruang hari ini Rp100.000, sebelumnya
+  belum ada pengeluaran. Sisa Rp900.000 memakai hasil terjaga Rp400.000;
+  Rp500.000 tersisa dibagi 25 hari, sehingga Rp100.000 menjadi Rp80.000/hari.
+- Keadaan awal ditampilkan dengan overlay HTML pada panel uang dan pesan di
+  gambar input yang sudah ada. Contoh Aman tetap memakai tampilan asli
+  Rp64.000/terpakai Rp36.000 dan pembelian Rp25.000. Screenshot hasil tidak diedit.
+- Urutan ketikan mengikuti skenario: Rp1 sampai Rp1.000.000 untuk melewati
+  batas, Rp2 sampai Rp25.000 untuk Aman. Rp1.000.000 tercapai pada 2250 ms;
+  zoom berakhir 2550 ms, dampak muncul 3100 ms, putusan 5600 ms, selesai 7800 ms.
+- Rasio bingkai tetap. Gambar hasil memakai `object-fit: contain`; sorotan
+  dampak disesuaikan ke atas 15.5%/tinggi 14.5%, putusan 91%/tinggi 7.1%.
+- Alt, caption, nominal, dan fixture pengujian diperbarui sesuai contoh baru.
+  Tidak mengubah mesin perhitungan aplikasi, motion scroll, atau navigasi.
+- Kedua contoh, perpindahan keyboard, decode lambat, dan pergantian saat
+  autoplay lulus di enam ukuran layar lewat `work/check-workflow-scenarios.cjs`.
+  Hasil dan screenshot: `outputs/website-tests/workflow-scenarios/`.
+- `work/check-workflow-animation.cjs` lulus enam viewport: seluruh digit,
+  perpindahan fase, sorotan, jeda viewport, reduced motion, dan fallback tanpa JS.
+  `work/check-workflow-controls.cjs` lulus tujuh viewport beserta kontrol manual,
+  keyboard/sentuh, decode lambat, dan kegagalan gambar. File hasil sama persis
+  dengan sumber pengguna (hash SHA-256 diverifikasi).
+- Galeri diuji pada 1440, 390, 320 px; gambar baru utuh dan bingkai tetap stabil.
+  Pemeriksaan memakai Edge lokal karena browser dalam aplikasi gagal terhubung.
+  Tidak ada push/publikasi atau build aplikasi.

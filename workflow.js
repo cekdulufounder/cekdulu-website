@@ -14,17 +14,24 @@
   var scenarioControls = root.closest("section").querySelector("[data-workflow-scenarios]");
   var resultImage = root.querySelector("[data-workflow-result]");
   var caption = root.querySelector("[data-workflow-caption]");
+  var guide = root.querySelector("[data-workflow-guide]");
+  var guidePositioned = false;
+  var guideAnimation = null;
   var rupiah = new Intl.NumberFormat("id-ID");
   var scenarios = {
     safe: {
       amount: 25000,
+      digits: [2, 25, 250, 2500, 25000, 25000],
+      remaining: 64000,
       image: "assets/reflection-safe.jpg",
       description: "Contoh hasil Aman: setelah pembelian Rp25.000, sisa ruang Rp39.000 dan total terpakai hari ini Rp61.000."
     },
     over: {
-      amount: 250000,
-      image: "assets/reflection-over-limit.jpg",
-      description: "Contoh melewati batas: setelah pembelian Rp250.000, total terpakai Rp286.000. Hasil Terjaga Harian dipakai Rp114.500 dan ruang harian mulai besok berubah dari Rp100.000 menjadi Rp97.140 untuk 25 hari."
+      amount: 1000000,
+      digits: [1, 10, 100, 1000, 10000, 100000],
+      remaining: 100000,
+      image: "assets/reflection-over-limit-current.png",
+      description: "Contoh melewati batas: pembelian pertama Rp1.000.000, total terpakai Rp1.000.000. Hasil Terjaga Harian dipakai Rp400.000 dan ruang harian mulai besok berubah dari Rp100.000 menjadi Rp80.000 untuk 25 hari."
     }
   };
   var scenario = scenarios.over;
@@ -33,12 +40,13 @@
   var frames = [
     { at: 0, phase: "input", amount: 0, zoom: false },
     { at: 350, zoom: true },
-    { at: 750, amount: 2 },
-    { at: 1000, amount: 25 },
-    { at: 1250, amount: 250 },
-    { at: 1500, amount: 2500 },
-    { at: 1750, amount: 25000 },
-    { at: 2000, amount: "full" },
+    { at: 750, digit: 0 },
+    { at: 1000, digit: 1 },
+    { at: 1250, digit: 2 },
+    { at: 1500, digit: 3 },
+    { at: 1750, digit: 4 },
+    { at: 2000, digit: 5 },
+    { at: 2250, amount: "full" },
     { at: 2550, zoom: false },
     { at: 3100, phase: "impact" },
     { at: 5600, phase: "decision" },
@@ -59,6 +67,7 @@
   var explicitPlayback = false;
   var pageActive = true;
   var operation = 0;
+  var entranceTargets = Array.from(root.querySelectorAll("[data-scroll-reveal]"));
 
   function updateControls() {
     var label = failed ? "Contoh tidak tersedia" : motion.matches ? "Animasi dinonaktifkan" :
@@ -73,11 +82,41 @@
 
   function canRun() {
     return (visible || (explicitPlayback && inView)) && pageActive && !document.hidden &&
-      !motion.matches && !userPaused && !complete && !failed;
+      !motion.matches && !userPaused && !complete && !failed && entranceTargets.every(function (target) {
+        return !target.dataset.motionState || target.dataset.motionState === "settled";
+      });
+  }
+
+  function positionGuide(animate) {
+    if (!guide) return;
+    var active = steps.find(function (step) { return step.classList.contains("is-active"); });
+    if (!active) return;
+    var parent = guide.parentElement.getBoundingClientRect();
+    var previous = guide.getBoundingClientRect();
+    var target = active.getBoundingClientRect();
+    if (guideAnimation) guideAnimation.cancel();
+    var transform = "translate(" + (target.left - parent.left) + "px, " + (target.top - parent.top) + "px)";
+    guide.style.transform = transform;
+    guide.style.width = target.width + "px";
+    guide.style.height = target.height + "px";
+    guide.hidden = false;
+    root.classList.add("has-guide");
+    var moved = Math.abs(previous.left - target.left) > 0.5 || Math.abs(previous.top - target.top) > 0.5 ||
+      Math.abs(previous.width - target.width) > 0.5 || Math.abs(previous.height - target.height) > 0.5;
+    if (animate && guidePositioned && moved && !motion.matches && guide.animate) {
+      guideAnimation = guide.animate([
+        { transform: "translate(" + (previous.left - parent.left) + "px, " + (previous.top - parent.top) + "px)", width: previous.width + "px", height: previous.height + "px" },
+        { transform: transform, width: target.width + "px", height: target.height + "px" }
+      ], { duration: 380, easing: "cubic-bezier(0.22, 1, 0.36, 1)" });
+    }
+    guidePositioned = true;
   }
 
   function render(frame) {
-    if ("amount" in frame) amount.textContent = "Rp" + rupiah.format(frame.amount === "full" ? scenario.amount : frame.amount);
+    if ("amount" in frame || "digit" in frame) {
+      var value = "digit" in frame ? scenario.digits[frame.digit] : frame.amount === "full" ? scenario.amount : frame.amount;
+      amount.textContent = "Rp" + rupiah.format(value);
+    }
     if (typeof frame.zoom === "boolean") root.dataset.zoom = String(frame.zoom);
     if (!frame.phase) return;
     root.dataset.phase = frame.phase;
@@ -88,6 +127,7 @@
       else step.removeAttribute("aria-current");
       buttons[i].setAttribute("aria-pressed", String(i === index));
     });
+    positionGuide(true);
     scenes.forEach(function (scene) {
       var active = (scene.dataset.workflowScene === "input") === (frame.phase === "input");
       scene.setAttribute("aria-hidden", String(!active));
@@ -148,6 +188,7 @@
         } catch (error) {
           if (version !== assetVersion) return false;
           failed = true;
+          render({ phase: "input", amount: "full", zoom: false });
           root.dataset.playback = "unavailable";
           updateControls();
           return false;
@@ -193,8 +234,8 @@
     userPaused = motion.matches;
     explicitPlayback = explicit !== false && !motion.matches;
     updateControls();
-    if (!await prepare() || token !== operation) return;
     render({ phase: "input", amount: motion.matches ? "full" : 0, zoom: false });
+    if (!await prepare() || token !== operation) return;
     root.dataset.playback = motion.matches ? "manual" : "idle";
     announcement.textContent = "Contoh kembali ke langkah pertama. Ketik nominal.";
     reconcile();
@@ -218,7 +259,7 @@
     resultImage.alt = scenario.description;
     var formatted = "Rp" + rupiah.format(scenario.amount);
     caption.textContent = "Contoh pembelian " + formatted;
-    root.querySelector('[data-workflow-scene="input"] img').alt = "Contoh halaman utama: ruang hari ini Rp64.000 sebelum mengecek pembelian " + formatted + ".";
+    root.querySelector('[data-workflow-scene="input"] img').alt = "Contoh halaman utama: ruang hari ini Rp" + rupiah.format(scenario.remaining) + " sebelum mengecek pembelian " + formatted + ".";
     render({ phase: "input", amount: "full", zoom: false });
     updateControls();
   }
@@ -258,9 +299,18 @@
   root.classList.add("is-enhanced");
   root.dataset.playback = "idle";
   setScenario("over");
+  if (!motion.matches) render({ phase: "input", amount: 0, zoom: false });
   scenarioControls.hidden = false;
   root.querySelector("[data-workflow-controls]").hidden = false;
   updateControls();
+
+  if (guide) {
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(function () { positionGuide(false); }).observe(guide.parentElement);
+    } else {
+      window.addEventListener("resize", function () { positionGuide(false); });
+    }
+  }
 
   // Pause the finite timeline without losing its place when the user scrolls away.
   if ("IntersectionObserver" in window) {
@@ -273,6 +323,9 @@
     inView = true;
   }
   document.addEventListener("visibilitychange", reconcile);
+  root.addEventListener("cekdulu:motion-settled", function (event) {
+    if (!event.detail.manual) reconcile();
+  });
   window.addEventListener("pagehide", function () { pageActive = false; pause(); });
   window.addEventListener("pageshow", function () { pageActive = true; reconcile(); });
   motion.addEventListener("change", function () {

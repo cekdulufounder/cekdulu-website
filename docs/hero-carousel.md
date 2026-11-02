@@ -22,11 +22,23 @@ Drawer dan widget asli tidak ditampilkan pada carousel atau bagian bawah.
 ## File publik
 
 - index.html, carousel.css, carousel.js.
-- assets/app-home.jpg, reflection-safe.jpg, reflection-over-limit.jpg,
+- assets/app-home.jpg, reflection-safe.jpg, reflection-over-limit-current.png,
   daily-history.jpg.
 - Ikon Lucide lokal: chevron-left.svg, chevron-right.svg, pause.svg,
   play.svg; note-arrow.svg untuk catatan.
 - Tidak ada framework, layanan eksternal, atau library runtime baru.
+
+Screenshot Melewati Batas diperbarui dari `Downloads/Melewati batas.PNG`
+(424 x 888), disalin utuh tanpa crop atau mengubah angkanya. Galeri menampilkan
+pembelian Rp1.000.000, hasil terjaga dipakai Rp400.000, serta ruang harian
+berikutnya Rp100.000 menjadi Rp80.000 untuk 25 hari. Bingkai tetap
+berukuran sama; `object-fit: contain` mempertahankan seluruh gambar.
+
+Revisi 2 November 2026: underline "tanpa ribet" beserta animasinya dihapus.
+Tulisan tangan hero menjadi 18 px (sebelumnya 12 px), atau 16.5 px pada
+layout catatan bawah HP (sebelumnya 11 px). Area desktop diperlebar menjadi
+150 px; breakpoint catatan bawah 1400 px. Ruang catatan bawah ditambah 30 px
+agar pergantian keempat teks tidak menggeser kontrol. Motion lainnya tetap.
 
 ## Verifikasi
 

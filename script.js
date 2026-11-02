@@ -8,6 +8,16 @@
   var toast = document.querySelector("[data-toast]");
   var toastTimer = null;
   var mobileNavigation = window.matchMedia("(max-width: 980px)");
+  var navigationSections = [];
+  var currentSection = null;
+  var headerUpdatePending = false;
+
+  if (navigation) {
+    navigation.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      var section = document.getElementById(link.getAttribute("href").slice(1));
+      if (section) navigationSections.push({ link: link, section: section });
+    });
+  }
 
   // Older shared homepage links now lead to their dedicated pages.
   if (document.querySelector(".hero--intro")) {
@@ -38,15 +48,22 @@
   }
 
   function updateCurrentLink() {
-    if (!navigation) return;
-    var section = window.location.hash || "#top";
-    if (section === "#mulai") section = "#tentang";
-    if (["#pengalaman", "#keseharian", "#tampilan"].indexOf(section) !== -1) section = "#cara-kerja";
-    navigation.querySelectorAll('a[href^="#"]').forEach(function (link) {
-      if (link.getAttribute("href") === section) {
-        link.setAttribute("aria-current", "location");
+    if (!navigationSections.length) return;
+    var active = navigationSections[0];
+    var headerBottom = header ? header.getBoundingClientRect().bottom : 0;
+    var activationLine = Math.min(window.innerHeight / 3, headerBottom + 24);
+
+    // Sections without a menu item stay grouped with the preceding navigation section.
+    navigationSections.forEach(function (item) {
+      if (item.section.getBoundingClientRect().top <= activationLine) active = item;
+    });
+    if (currentSection === active.section) return;
+    currentSection = active.section;
+    navigationSections.forEach(function (item) {
+      if (item === active) {
+        item.link.setAttribute("aria-current", "location");
       } else {
-        link.removeAttribute("aria-current");
+        item.link.removeAttribute("aria-current");
       }
     });
   }
@@ -72,16 +89,28 @@
 
     mobileNavigation.addEventListener("change", syncNavigation);
     syncNavigation();
-    updateCurrentLink();
-    window.addEventListener("hashchange", updateCurrentLink);
+    window.addEventListener("hashchange", queueHeaderUpdate);
   }
 
   function updateHeader() {
     if (header) header.classList.toggle("is-scrolled", window.scrollY > 24);
+    updateCurrentLink();
+  }
+
+  function queueHeaderUpdate() {
+    if (headerUpdatePending) return;
+    headerUpdatePending = true;
+    window.requestAnimationFrame(function () {
+      headerUpdatePending = false;
+      updateHeader();
+    });
   }
 
   updateHeader();
-  window.addEventListener("scroll", updateHeader, { passive: true });
+  window.addEventListener("scroll", queueHeaderUpdate, { passive: true });
+  window.addEventListener("resize", queueHeaderUpdate, { passive: true });
+  window.addEventListener("load", queueHeaderUpdate);
+  window.addEventListener("pageshow", queueHeaderUpdate);
 
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && body.classList.contains("nav-open")) {

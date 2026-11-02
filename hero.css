@@ -22,6 +22,7 @@
 .intro-tagline { margin: 14px 0 36px; font-size: 25px; color: var(--text-soft); }
 .intro-headline { max-width: 590px; margin-bottom: 18px; font-size: 30px; line-height: 1.4; font-weight: 500; }
 .intro-headline strong { color: #4fe0b6; font-weight: 750; }
+.intro-emphasis { display: inline-block; }
 .intro-description { max-width: 505px; margin-bottom: 30px; color: var(--text-soft); font-size: 17px; line-height: 1.7; }
 .intro-pause { display: block; margin-top: 10px; }
 .intro-pause strong { color: var(--white); font-weight: 700; }
@@ -39,8 +40,33 @@
 .intro-how__icon img { filter: brightness(0) invert(1); }
 .intro-routine { margin: 22px 0 0; color: var(--text-soft); font-size: 14px; line-height: 1.6; font-weight: 600; }
 
+@media (prefers-reduced-motion: no-preference) {
+  .hero--intro .intro-brand,
+  .hero--intro .intro-headline,
+  .hero--intro .intro-description,
+  .hero--intro .intro-routine {
+    animation: intro-entrance 900ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
+  .hero--intro .intro-headline { animation-delay: 180ms; }
+  .hero--intro .intro-description { animation-delay: 360ms; }
+  .hero--intro .intro-routine { animation-delay: 540ms; }
+  .hero--intro [data-motion-hero].is-motion-ready:not(.is-motion-seen) { opacity: 0; transform: translateY(32px); }
+  .hero--intro [data-motion-hero].is-hero-entering { animation: intro-preview-entrance 1100ms cubic-bezier(0.22, 0.61, 0.36, 1) 180ms both; }
+}
+
+@keyframes intro-entrance {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes intro-preview-entrance {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .intro-preview { position: relative; margin: 0; min-width: 0; justify-self: center; }
-.intro-annotation { position: absolute; right: -150px; width: 126px; margin: 0; font-family: "Segoe Print", "Comic Sans MS", cursive; font-size: 12px; font-weight: 500; line-height: 1.65; color: #c4e5df; }
+.intro-annotation { position: absolute; right: -174px; width: 150px; margin: 0; font-family: "Segoe Print", "Comic Sans MS", cursive; font-size: 18px; font-weight: 500; line-height: 1.65; color: #c4e5df; }
 .intro-annotation img { position: absolute; left: -31px; top: 16px; filter: invert(86%) sepia(18%) saturate(298%) hue-rotate(111deg) brightness(99%) contrast(89%); }
 .intro-annotation--decision { top: 42px; transform: rotate(-5deg); }
 .intro-annotation--plan { top: 324px; transform: rotate(4deg); }
@@ -106,10 +132,10 @@
   .intro-phone { width: 276px; }
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1400px) {
   .intro-preview { display: flex; flex-direction: column; gap: 0; }
   .intro-annotations { width: 284px; margin: 34px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-  .intro-annotation { position: relative; top: auto; right: auto; width: auto; transform: none; font-size: 11px; }
+  .intro-annotation { position: relative; top: auto; right: auto; width: auto; transform: none; font-size: 16.5px; }
   .intro-annotation img { width: 22px; height: 22px; top: -25px; left: 0; }
   .intro-preview figcaption { max-width: none; text-align: center; }
 }

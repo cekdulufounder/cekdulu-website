@@ -25,13 +25,24 @@ statis, tanpa instalasi dependency atau proses build.
 
 ## Publikasi
 
-Repository ini disiapkan untuk hosting statis. Deployment dan DNS domain
-diaktifkan terpisah setelah repository terhubung ke GitHub.
-Untuk paket publik, sertakan halaman HTML, CSS, JavaScript, manifest, dan aset
-yang dipakai; kecualikan `.git/`, dokumen kerja, dan file lingkungan lokal.
+Publikasi menggunakan GitHub Pages dengan sumber **GitHub Actions**.
+Workflow `.github/workflows/pages.yml` berjalan setiap ada push ke `main`
+atau melalui **Actions > Publish CekDulu website > Run workflow**.
 
-Setelah deployment otomatis dikonfigurasi, perubahan website dipublikasikan
-melalui commit dan push ke branch `main`.
+Paket publik dibuat di `_site/` dan hanya berisi HTML, CSS, JavaScript,
+manifest, `.nojekyll`, dan `assets/`. Dokumen kerja, `.git/`, README, serta
+file lingkungan lokal tidak disertakan dalam paket deployment.
+
+Alamat sementara: https://cekdulufounder.github.io/cekdulu-website/
+
+Domain `cekdulu.app` dihubungkan terpisah melalui **Settings > Pages >
+Custom domain**, kemudian DNS Hostinger. Tambahkan custom domain di GitHub
+sebelum mengarahkan DNS ke Pages. Aktifkan **Enforce HTTPS** setelah
+sertifikat domain tersedia. Jangan menghapus record DNS untuk email.
+
+Perubahan website berikutnya dipublikasikan melalui commit dan push ke
+branch `main`. Periksa status sukses workflow sebelum menganggap versi
+terbaru sudah terbit; push yang gagal deployment tidak mengganti versi live.
 
 Foto ilustrasi pada bagian Untuk Siapa dibuat menggunakan Imagegen.
 Ikon antarmuka menggunakan Lucide; logo layanan adalah milik pemilik mereknya.

@@ -1,5 +1,11 @@
 # Screenshot dari pengguna
 
+Pembaruan 1 November 2026: hasil Melewati Batas pada galeri dan demo sekarang
+memakai `reflection-over-limit-current.png` dari `Downloads/Melewati batas.PNG`
+(424 x 888): pembelian Rp1.000.000, hasil terjaga Rp400.000, ruang berikutnya
+Rp80.000/hari. Lihat `docs/workflow-demo.md` untuk keadaan awal contoh.
+Catatan percobaan crop dan daftar file awal di bawah tetap berupa riwayat.
+
 Status terkini: presentasi screenshot/crop di seluruh halaman dibatalkan.
 Empat screenshot kini dipakai hanya dalam carousel di hero, sesuai arahan
 pengguna. Lihat `docs/hero-carousel.md`. screenshots.css tetap tidak digunakan;

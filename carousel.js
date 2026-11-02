@@ -23,10 +23,14 @@
   var visible = false;
   var pointer = null;
 
+  function entranceReady() {
+    return !root.dataset.motionState || root.dataset.motionState === "settled";
+  }
+
   function schedule() {
     window.clearTimeout(timer);
     timer = null;
-    if (userPaused || hovered || focused || !visible || document.hidden) return;
+    if (userPaused || hovered || focused || !visible || document.hidden || !entranceReady()) return;
     timer = window.setTimeout(function () { show(index + 1, false); }, 6000);
   }
 
@@ -59,7 +63,7 @@
       return;
     }
     if (token !== request) return;
-    if (!manual && (userPaused || hovered || focused || !visible || document.hidden)) {
+    if (!manual && (userPaused || hovered || focused || !visible || document.hidden || !entranceReady())) {
       schedule();
       return;
     }
@@ -131,6 +135,7 @@
   viewport.addEventListener("dragstart", function (event) { event.preventDefault(); });
 
   document.addEventListener("visibilitychange", schedule);
+  root.addEventListener("cekdulu:motion-settled", schedule);
   motion.addEventListener("change", function () {
     if (motion.matches) userPaused = true;
     updateToggle();
